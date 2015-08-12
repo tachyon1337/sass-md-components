@@ -685,7 +685,7 @@
     -webkit-transition: all .3s;
     transition: all .3s;
     color:$_color;
-    @include md-component-placeholder($_placeholder);
+    @include component-placeholder($_placeholder);
 
     &[disabled]{
       opacity:.5;
