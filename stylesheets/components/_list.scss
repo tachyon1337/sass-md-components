@@ -1,0 +1,69 @@
+
+
+
+/// @access private
+/// @param {Map} $map
+@mixin _md-list($map){
+  $_nth-type-1-default:map-deep-get($MD-Color,blue,value);
+  $_nth-type-2-default:map-deep-get($MD-Color,light-green,primary,400,value);
+  $_nth-type-3-default:map-deep-get($MD-Color,red,value);
+  $_nth-type-4-default:map-deep-get($MD-Color,yellow,value);
+
+  $_font-size:map-get-default($map,font-size,14px);
+  $_padding:map-nested-get-default($map,item,padding,.5em 3em .5em 1em);
+  $_border-bottom:map-nested-get-default($map,item,border-bottom,1px solid #f0f0f0);
+  $_nth-type-1:map-nested-get-default($map,item,n-type-1,$_nth-type-1-default);
+  $_nth-type-2:map-nested-get-default($map,item,n-type-1,$_nth-type-2-default);
+  $_nth-type-3:map-nested-get-default($map,item,n-type-1,$_nth-type-3-default);
+  $_nth-type-4:map-nested-get-default($map,item,n-type-1,$_nth-type-4-default);
+
+  @include flexbox-column();
+  &>li{
+    font-size:14px;
+    @include flexbox($justification:space-between);
+    list-style: none;
+    width:100%;
+    padding:$_padding;
+    border-bottom:$_border-bottom;
+
+    &:nth-of-type(4n + 1){
+      border-left:2px solid $_nth-type-1;
+    }
+    &:nth-of-type(4n + 2){
+      border-left:2px solid $_nth-type-2;
+    }
+    &:nth-of-type(4n + 3){
+      border-left:2px solid $_nth-type-3;
+    }
+    &:nth-of-type(4n + 4){
+      border-left:2px solid $_nth-type-4;
+    }
+  }
+}
+
+
+
+
+/// @access public
+/// @require {Mixin} _md-list - private mixin
+/// @param {String} $class - class scope
+/// @param {Map} $map
+/// @prop {String} font-size (14px) - font-size
+/// @prop {Map} item
+/// @prop {String} item.padding (.5em 3em .5em 1em) - item padding
+/// @prop {String} item.border-bottom (1px solid #f0f0f0) - item bottom border
+/// @prop {String} item.n-type-1 (md blue) - item nth of type(4n +1) left border color
+/// @prop {String} item.n-type-2 (md light-green) - item nth of type(4n +2) left border color
+/// @prop {String} item.n-type-3 (md red) - item nth of type(4n +3) left border color
+/// @prop {String} item.n-type-4 (md yellow) - item nth of type(4n +4) left border color
+/// @content css
+/// @example
+///   md-list()
+
+@mixin md-list($tags:null,$class:null,$map:()){
+  $tag:md-list;
+  @include element-tag($tag,$tags,$class){
+    @include _md-list($map);
+    @content;
+  }
+};

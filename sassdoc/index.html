@@ -1,0 +1,2422 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Sass-md-components - v1.0.0</title><link rel="stylesheet" href="assets/css/main.css"><link href="http://fonts.googleapis.com/css?family=Open+Sans:400,500,700" rel="stylesheet" type="text/css"><meta name="viewport" content="width=device-width"><meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"><!-- Open Graph tags --><meta property="og:title" content="Sass-md-components - SassDoc"><meta property="og:type" content="website"><meta property="og:description" content="<p>Sass Material Design Components</p>
+"><!-- Thanks to Sass-lang.com for the icons --><link href="assets/images/favicon.png" rel="shortcut icon"></head><body><aside class="sidebar" role="nav"><div class="sidebar__header"><h1 class="sidebar__title">Sass-md-components - 1.0.0</h1></div><div class="sidebar__body"><button type="button" class="btn-toggle js-btn-toggle" data-alt="Open all">Close all</button><p class="sidebar__item sidebar__item--heading" data-slug="undefined"><a href="#undefined">General</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-mixin"><a href="#undefined-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-name="_avatar-size" data-type="mixin"><a href="#mixin-_avatar-size">_avatar-size</a></li><li class="sidebar__item sassdoc__item" data-name="_md-avatar" data-type="mixin"><a href="#mixin-_md-avatar">_md-avatar</a></li><li class="sidebar__item sassdoc__item" data-name="_md-avatar-css" data-type="mixin"><a href="#mixin-_md-avatar-css">_md-avatar-css</a></li><li class="sidebar__item sassdoc__item" data-name="md-avatar" data-type="mixin"><a href="#mixin-md-avatar">md-avatar</a></li><li class="sidebar__item sassdoc__item" data-name="_md-badge" data-type="mixin"><a href="#mixin-_md-badge">_md-badge</a></li><li class="sidebar__item sassdoc__item" data-name="md-badge" data-type="mixin"><a href="#mixin-md-badge">md-badge</a></li><li class="sidebar__item sassdoc__item" data-name="_md-bar" data-type="mixin"><a href="#mixin-_md-bar">_md-bar</a></li><li class="sidebar__item sassdoc__item" data-name="md-bar" data-type="mixin"><a href="#mixin-md-bar">md-bar</a></li><li class="sidebar__item sassdoc__item" data-name="md-brand" data-type="mixin"><a href="#mixin-md-brand">md-brand</a></li><li class="sidebar__item sassdoc__item" data-name="_md-button-group" data-type="mixin"><a href="#mixin-_md-button-group">_md-button-group</a></li><li class="sidebar__item sassdoc__item" data-name="md-button-group" data-type="mixin"><a href="#mixin-md-button-group">md-button-group</a></li><li class="sidebar__item sassdoc__item" data-name="md-content" data-type="mixin"><a href="#mixin-md-content">md-content</a></li><li class="sidebar__item sassdoc__item" data-name="_md-datepicker" data-type="mixin"><a href="#mixin-_md-datepicker">_md-datepicker</a></li><li class="sidebar__item sassdoc__item" data-name="_jquery-ui-datepicker" data-type="mixin"><a href="#mixin-_jquery-ui-datepicker">_jquery-ui-datepicker</a></li><li class="sidebar__item sassdoc__item" data-name="md-datepicker" data-type="mixin"><a href="#mixin-md-datepicker">md-datepicker</a></li><li class="sidebar__item sassdoc__item" data-name="_md-dialog" data-type="mixin"><a href="#mixin-_md-dialog">_md-dialog</a></li><li class="sidebar__item sassdoc__item" data-name="md-dialog" data-type="mixin"><a href="#mixin-md-dialog">md-dialog</a></li><li class="sidebar__item sassdoc__item" data-name="_md-dropdown" data-type="mixin"><a href="#mixin-_md-dropdown">_md-dropdown</a></li><li class="sidebar__item sassdoc__item" data-name="md-dropdown" data-type="mixin"><a href="#mixin-md-dropdown">md-dropdown</a></li><li class="sidebar__item sassdoc__item" data-name="_md-fab-transform" data-type="mixin"><a href="#mixin-_md-fab-transform">_md-fab-transform</a></li><li class="sidebar__item sassdoc__item" data-name="md-fab-transform" data-type="mixin"><a href="#mixin-md-fab-transform">md-fab-transform</a></li><li class="sidebar__item sassdoc__item" data-name="_md-fab" data-type="mixin"><a href="#mixin-_md-fab">_md-fab</a></li><li class="sidebar__item sassdoc__item" data-name="md-fab" data-type="mixin"><a href="#mixin-md-fab">md-fab</a></li><li class="sidebar__item sassdoc__item" data-name="md-grid-box" data-type="mixin"><a href="#mixin-md-grid-box">md-grid-box</a></li><li class="sidebar__item sassdoc__item" data-name="md-grid" data-type="mixin"><a href="#mixin-md-grid">md-grid</a></li><li class="sidebar__item sassdoc__item" data-name="_md-icon-badge" data-type="mixin"><a href="#mixin-_md-icon-badge">_md-icon-badge</a></li><li class="sidebar__item sassdoc__item" data-name="md-icon-badge" data-type="mixin"><a href="#mixin-md-icon-badge">md-icon-badge</a></li><li class="sidebar__item sassdoc__item" data-name="md-icon-card" data-type="mixin"><a href="#mixin-md-icon-card">md-icon-card</a></li><li class="sidebar__item sassdoc__item" data-name="_md-layout" data-type="mixin"><a href="#mixin-_md-layout">_md-layout</a></li><li class="sidebar__item sassdoc__item" data-name="md-layout" data-type="mixin"><a href="#mixin-md-layout">md-layout</a></li><li class="sidebar__item sassdoc__item" data-name="_md-list" data-type="mixin"><a href="#mixin-_md-list">_md-list</a></li><li class="sidebar__item sassdoc__item" data-name="md-list" data-type="mixin"><a href="#mixin-md-list">md-list</a></li><li class="sidebar__item sassdoc__item" data-name="_menu-dropdown" data-type="mixin"><a href="#mixin-_menu-dropdown">_menu-dropdown</a></li><li class="sidebar__item sassdoc__item" data-name="_md-menu" data-type="mixin"><a href="#mixin-_md-menu">_md-menu</a></li><li class="sidebar__item sassdoc__item" data-name="md-menu" data-type="mixin"><a href="#mixin-md-menu">md-menu</a></li><li class="sidebar__item sassdoc__item" data-name="nav-list" data-type="mixin"><a href="#mixin-nav-list">nav-list</a></li><li class="sidebar__item sassdoc__item" data-name="md-ripple-effect" data-type="mixin"><a href="#mixin-md-ripple-effect">md-ripple-effect</a></li><li class="sidebar__item sassdoc__item" data-name="_paper-header-md-toolbar" data-type="mixin"><a href="#mixin-_paper-header-md-toolbar">_paper-header-md-toolbar</a></li><li class="sidebar__item sassdoc__item" data-name="_md-toolbar" data-type="mixin"><a href="#mixin-_md-toolbar">_md-toolbar</a></li><li class="sidebar__item sassdoc__item" data-name="md-toolbar" data-type="mixin"><a href="#mixin-md-toolbar">md-toolbar</a></li><li class="sidebar__item sassdoc__item" data-name="_md-radio" data-type="mixin"><a href="#mixin-_md-radio">_md-radio</a></li><li class="sidebar__item sassdoc__item" data-name="_md-checkbox" data-type="mixin"><a href="#mixin-_md-checkbox">_md-checkbox</a></li><li class="sidebar__item sassdoc__item" data-name="_md-range" data-type="mixin"><a href="#mixin-_md-range">_md-range</a></li><li class="sidebar__item sassdoc__item" data-name="_md-switch" data-type="mixin"><a href="#mixin-_md-switch">_md-switch</a></li><li class="sidebar__item sassdoc__item" data-name="_md-file" data-type="mixin"><a href="#mixin-_md-file">_md-file</a></li><li class="sidebar__item sassdoc__item" data-name="_md-input" data-type="mixin"><a href="#mixin-_md-input">_md-input</a></li><li class="sidebar__item sassdoc__item" data-name="_md-select" data-type="mixin"><a href="#mixin-_md-select">_md-select</a></li><li class="sidebar__item sassdoc__item" data-name="_md-input-icon-button" data-type="mixin"><a href="#mixin-_md-input-icon-button">_md-input-icon-button</a></li><li class="sidebar__item sassdoc__item" data-name="md-radio" data-type="mixin"><a href="#mixin-md-radio">md-radio</a></li><li class="sidebar__item sassdoc__item" data-name="md-checkbox" data-type="mixin"><a href="#mixin-md-checkbox">md-checkbox</a></li><li class="sidebar__item sassdoc__item" data-name="md-range" data-type="mixin"><a href="#mixin-md-range">md-range</a></li><li class="sidebar__item sassdoc__item" data-name="md-switch" data-type="mixin"><a href="#mixin-md-switch">md-switch</a></li><li class="sidebar__item sassdoc__item" data-name="md-select" data-type="mixin"><a href="#mixin-md-select">md-select</a></li><li class="sidebar__item sassdoc__item" data-name="md-file" data-type="mixin"><a href="#mixin-md-file">md-file</a></li><li class="sidebar__item sassdoc__item" data-name="md-input" data-type="mixin"><a href="#mixin-md-input">md-input</a></li><li class="sidebar__item sassdoc__item" data-name="md-input-icon-button" data-type="mixin"><a href="#mixin-md-input-icon-button">md-input-icon-button</a></li><li class="sidebar__item sassdoc__item" data-name="md-forms" data-type="mixin"><a href="#mixin-md-forms">md-forms</a></li><li class="sidebar__item sassdoc__item" data-name="_md-semantic-state" data-type="mixin"><a href="#mixin-_md-semantic-state">_md-semantic-state</a></li><li class="sidebar__item sassdoc__item" data-name="_md-semantic-component" data-type="mixin"><a href="#mixin-_md-semantic-component">_md-semantic-component</a></li><li class="sidebar__item sassdoc__item" data-name="md-semantic-components" data-type="mixin"><a href="#mixin-md-semantic-components">md-semantic-components</a></li></ul></div></div></aside><article class="main" role="main"><header class="header" role="banner"><div class="container"><div class="sassdoc__searchbar searchbar"><label for="js-search-input" class="visually-hidden">Search</label><div class="searchbar__form" id="js-search"><input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search"><ul class="searchbar__suggestions" id="js-search-suggestions"></ul></div></div></div></header><section class="main__section"><h1 class="main__heading" id="undefined"><div class="container">General</div></h1><section class="main__sub-section" id="undefined-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="mixin-_avatar-size"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_avatar-size">_avatar-size</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _avatar-size() { 
+  @for $i from 3 through 10{
+    $size:$i*10;
+    &amp;.size-#{$size}{
+      height:#{$size}px;
+      width:#{$size}px;
+      min-height:#{$size}px;
+      min-width:#{$size}px
+    }
+  }
+ }" data-collapsed="@mixin _avatar-size() { ... }"><code>@mixin _avatar-size() { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-_md-avatar"><code>_md-avatar</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-_md-avatar-css"><code>_md-avatar-css</code></a></li></ul></section><section class="main__item container item" id="mixin-_md-avatar"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_md-avatar">_md-avatar</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _md-avatar() { 
+  display:block;
+  .avatar{
+    $_size:map-get-default($map,size,40px);
+    height:$_size;
+    width:$_size;
+    min-height:$_size;
+    min-width:$_size;
+    border-radius:50%;
+    @include _avatar-size();
+  }
+ }" data-collapsed="@mixin _md-avatar() { ... }"><code>@mixin _md-avatar() { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_avatar-size"><code>_avatar-size</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-avatar"><code>md-avatar</code></a></li></ul></section><section class="main__item container item" id="mixin-_md-avatar-css"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_md-avatar-css">_md-avatar-css</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _md-avatar-css() { 
+  $_size:map-get-default($map,size,40px);
+  height:$_size;
+  width:$_size;
+  min-height:$_size;
+  min-width:$_size;
+  border-radius:50%;
+  @include _avatar-size();
+ }" data-collapsed="@mixin _md-avatar-css() { ... }"><code>@mixin _md-avatar-css() { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_avatar-size"><code>_avatar-size</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-avatar"><code>md-avatar</code></a></li></ul></section><section class="main__item container item" id="mixin-md-avatar"><h3 class="item__heading"><a class="item__name" href="#mixin-md-avatar">md-avatar</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin md-avatar($class, $map) { 
+  $tag:md-avatar;
+  @include element-tag($tag:$tag,$class:$class){
+    @include _md-avatar($map);
+    @content;
+  }
+  .md-avatar{
+    @include _md-avatar-css($map);
+  }
+ }" data-collapsed="@mixin md-avatar($class, $map) { ... }"><code>@mixin md-avatar($class, $map) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$class</code></th><td data-label="desc"><p>class scope</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive). Role: css</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>md-avatar()</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_md-avatar"><code>_md-avatar</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_md-avatar-css"><code>_md-avatar-css</code></a></li></ul></section><section class="main__item container item" id="mixin-_md-badge"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_md-badge">_md-badge</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _md-badge($map) { 
+  $_size:map-get-default($map,size,1.5em);
+  $_font-size:map-get-default($map,font-size,12px);
+  border-radius:50%;
+  height: $_size;
+  width: $_size;
+  @include flexbox($justification:center,$alignment:center);
+  font-size: $_font-size;
+ }" data-collapsed="@mixin _md-badge($map) { ... }"><code>@mixin _md-badge($map) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-badge"><code>md-badge</code></a></li></ul></section><section class="main__item container item" id="mixin-md-badge"><h3 class="item__heading"><a class="item__name" href="#mixin-md-badge">md-badge</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin md-badge($class, $map) { 
+
+  md-badge,.md-badge{
+    @if $class != null{
+      &amp;.#{$class} {
+        @include _md-badge($map);
+        @content;
+      }
+    }@else{
+      @include _md-badge($map);
+      @content;
+    }
+  }
+
+ }" data-collapsed="@mixin md-badge($class, $map) { ... }"><code>@mixin md-badge($class, $map) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$class</code></th><td data-label="desc"><p>class scope</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive). Role: css</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>md-badge(){@extend .md.indigo; }</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_md-badge"><code>_md-badge</code></a></li></ul></section><section class="main__item container item" id="mixin-_md-bar"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_md-bar">_md-bar</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _md-bar($map) { 
+  $_background:map-get-default($map,background,#fff);
+  $_font-size:map-get-default($map,font-size,14px);
+  $_height:map-get-default($map,height,60px);
+  $_border:map-get-default($map,border-bottom,1px solid #f0f0f0);
+  $_width:map-nested-get-default($map,side-panel,width,225px);
+  $_side-panel-padding:map-nested-get-default($map,side-panel,padding,1em);
+  $_side-panel-border:map-nested-get-default($map,side-panel,border-right,1px solid #f0f0f0);
+  $_main-panel-padding:map-nested-get-default($map,main-panel,padding,0 3em 0 1em);
+
+  height:$_height;
+  border-bottom:$_border;
+  @include flexbox($alignment:center);
+  font-size:$_font-size;
+  overflow-x:hidden;
+  background:$_background;
+
+  &amp;&gt;side-panel{
+    width:$_width;
+    height:100%;
+    border-right:$_side-panel-border;
+    @include flexbox($alignment:center);
+    padding-left: $_side-panel-padding;
+    &amp;.space-around{
+      @include justify-content(space-around);
+    }
+    &amp;.space-between{
+      @include justify-content(space-between);
+    }
+  }
+  &amp;&gt;main-panel{
+    @include flexbox($alignment:center,$justification:space-between);
+    @include flex-grow(4);
+    padding:$_main-panel-padding;
+  }
+
+ }" data-collapsed="@mixin _md-bar($map) { ... }"><code>@mixin _md-bar($map) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-bar"><code>md-bar</code></a></li></ul></section><section class="main__item container item" id="mixin-md-bar"><h3 class="item__heading"><a class="item__name" href="#mixin-md-bar">md-bar</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin md-bar($class, $map) { 
+  $tag:md-bar;
+  @include element-tag($tag,$tags,$class){
+    @include _md-bar($map);
+    @content;
+  }
+ }" data-collapsed="@mixin md-bar($class, $map) { ... }"><code>@mixin md-bar($class, $map) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$class</code></th><td data-label="desc"><p>class scope</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive). Role: css</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>md-bar()</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_md-bar"><code>_md-bar</code></a></li></ul></section><section class="main__item container item" id="mixin-md-brand"><h3 class="item__heading"><a class="item__name" href="#mixin-md-brand">md-brand</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin md-brand($map) { 
+  $_height:map-get-default($map,height,56px);
+  $_padding:map-get-default($map,padding,0 6em 0 1em);
+  $_z-index:map-get-default($map,z-index,5);
+
+  md-brand{
+    width:100%;
+    height:$_height;
+    position:fixed;
+    @include flexbox($alignment:center);
+    padding:$_padding;
+    z-index:$_z-index;
+    @content
+  }
+ }" data-collapsed="@mixin md-brand($map) { ... }"><code>@mixin md-brand($map) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive). Role: css</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>md-brand(){ @extend .md.blue; }</code></pre></div></section><section class="main__item container item" id="mixin-_md-button-group"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_md-button-group">_md-button-group</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _md-button-group($map) { 
+  $_size:map-nested-get-default($map,item,size,35px);
+  $_background:map-nested-get-default($map,item,background,#fff);
+  $_border:map-nested-get-default($map,item,border,1px solid #eee);
+  $_icon-size:map-nested-get-default($map,icon,size,18px);
+  $_icon-color:map-nested-get-default($map,icon,color,#999);
+
+  @include flexbox();
+
+  &amp;&gt;*{
+    height:$_size;
+    width:$_size;
+    background:$_background;
+    border: $_border;
+
+    @include flexbox($justification:center,$alignment:center);
+    @include span-icon(){
+      color:$_icon-color;
+      font-size:$_icon-size;
+    }
+    &amp;:first-of-type{
+      border-right:0;
+    }
+  }
+
+ }" data-collapsed="@mixin _md-button-group($map) { ... }"><code>@mixin _md-button-group($map) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-button-group"><code>md-button-group</code></a></li></ul></section><section class="main__item container item" id="mixin-md-button-group"><h3 class="item__heading"><a class="item__name" href="#mixin-md-button-group">md-button-group</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin md-button-group($class, $map) { 
+  $tag:md-button-group;
+  @include element-tag($tag,$tags,$class){
+    @include _md-button-group($map);
+    @content;
+  }
+ }" data-collapsed="@mixin md-button-group($class, $map) { ... }"><code>@mixin md-button-group($class, $map) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$class</code></th><td data-label="desc"><p>class scope</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive).<h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>md-button-group()</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_md-button-group"><code>_md-button-group</code></a></li></ul></p></section><section class="main__item container item" id="mixin-md-content"><h3 class="item__heading"><a class="item__name" href="#mixin-md-content">md-content</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin md-content() { 
+  md-content,.md-content{
+    width:100%;
+    background:#fff;
+    @extend .md.elevation-05;
+    border-radius:2px;
+    margin-bottom:1.5em;
+    min-height:300px;
+    padding:1em 2em 1.5em 2em;
+    @content;
+  }
+
+ }" data-collapsed="@mixin md-content() { ... }"><code>@mixin md-content() { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive). Role: css</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>md-content()</code></pre></div></section><section class="main__item container item" id="mixin-_md-datepicker"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_md-datepicker">_md-datepicker</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _md-datepicker() { 
+  $_background:map-get-default($map,background,#fff);
+  $_header-color:map-get-default($map,header,#008d7f);
+  $_month-color:map-get-default($map,month,#616161);
+  $_day-color:map-get-default($map,day,#999);
+  $_year-color:map-get-default($map,year,rgba(255, 255, 255, 0.4));
+  $_active-color:map-get-default($map,active,#b6d9d6);
+  $_main-color: map-get-default($map,main,#009688);
+  $_font-regular:map-nested-get-default($map,font,regular,&#39;robotoregular&#39;);
+  $_font-medium:map-nested-get-default($map,font,medium,&#39;robotomedium&#39;);
+  $_font-icon:map-nested-get-default($map,icon,font,&#39;material&#39;);
+  $_icon-color:map-nested-get-default($map,icon,color,#676767);
+  $_icon-next:map-nested-get-default($map,icon,next,&quot;\e8a8&quot;);
+  $_icon-prev:map-nested-get-default($map,icon,prev,&quot;\e8a7&quot;);
+
+  .ui-datepicker,
+  .md-datepicker-header {
+    font-family: $_font-regular;
+  }
+  .ui-icon {
+    text-indent: -99999px;
+    overflow: hidden;
+  }
+
+  [title=Prev]{
+    position:relative;
+    &amp;:before{
+      font-family:$_font-icon;
+      content:$_icon-prev;
+      font-size:28px;
+      color:$_icon-color;
+      position:absolute;
+      top:6px;
+      left:16px;
+    }
+    &amp;:hover{
+      &amp;:before{
+        color:$_main-color;
+      }
+    }
+  }
+
+  .ui-datepicker .ui-datepicker-prev {
+    left: 0;
+    top:0;
+  }
+  .ui-datepicker .ui-datepicker-prev-hover {
+    left: 0;
+    top:0;
+  }
+
+  [title=Next]{
+    position:relative;
+    &amp;:before{
+      font-family:$_font-icon;
+      content:$_icon-next;
+      font-size:28px;
+      color:$_icon-color;
+      position:absolute;
+      top:5px;
+      left:-14px;
+    }
+    &amp;:hover{
+      &amp;:before{
+        color:$_main-color;
+      }
+    }
+  }
+
+  .ui-datepicker .ui-datepicker-next {
+    right: 0;
+    top:0;
+  }
+  .ui-datepicker .ui-datepicker-next-hover {
+    right: 0;
+    top:0;
+  }
+
+  .md-datepicker-header {
+    display: none;
+    background-color: $_main-color;
+    color: white;
+    text-align: center;
+    width: $width;
+
+    .md-datepicker-day {
+      background-color: $_header-color;
+      padding: 5px;
+      font-size: 1rem;
+    }
+
+    .md-datepicker-date {
+      height:160px;
+      @include flexbox-column($justification:space-between,$alignment:center);
+      padding: 10px;
+
+      .md-datepicker-month,
+      .md-datepicker-day-num,
+      .md-datepicker-year {
+        padding: 5px;
+      }
+      .md-datepicker-month {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+      }
+
+      .md-datepicker-day-num {
+        font-size: 4.5rem;
+      }
+
+      .md-datepicker-year {
+        font-size: 1.5rem;
+        font-weight: 200;
+        color: $_year-color;
+      }
+    }
+  }
+
+  .ui-datepicker {
+    padding: 0;
+    border: none;
+    @extend .md.elevation-5;
+    width: $width;
+    background:$_background;
+  }
+
+  .ui-corner-all {
+    border-radius: 0;
+  }
+
+  .ui-widget-header {
+    border: 0;
+  }
+
+  .ui-datepicker-header {
+    text-align: center;
+    background: white;
+    padding-bottom: 15px;
+    font-weight: 300;
+
+    .ui-datepicker-prev,
+    .ui-datepicker-next,
+    .ui-datepicker-title {
+      border: none;
+      outline: none;
+      margin: 5px;
+    }
+  }
+
+  .ui-datepicker-prev.ui-state-hover,
+  .ui-datepicker-next.ui-state-hover {
+    border: none;
+    outline: none;
+
+  }
+
+  .ui-datepicker-calendar {
+    .ui-state-default {
+      background: none;
+      border: none;
+      text-align: center;
+      height: 33px;
+      width: 33px;
+      line-height: 30px;
+      margin-left:4px;
+    }
+
+    td{
+      a{
+        font-size:16px;
+        color:$_icon-color;
+        &amp;:hover{
+          color:$_icon-color;
+        }
+      }
+    }
+
+    span{
+      &amp;[title]{
+        font-size:14px;
+        color:$_month-color;
+        font-family:$_font-medium;
+      }
+    }
+
+    .ui-state-highlight,.ui-state-hover {
+      color: $_main-color;
+      &amp;:hover{
+        color: $_main-color;
+      }
+    }
+
+    .ui-state-active {
+      border-radius: 50%;
+      background-color: $_active-color;
+      color: $_main-color;
+      &amp;:hover{
+        color: $_main-color;
+      }
+    }
+
+    thead th {
+      color: $_day-color;
+      font-weight: 200;
+    }
+  }
+
+  .ui-datepicker-month,.ui-datepicker-year{
+    font-size:16px;
+    color:$_month-color;
+    font-family:$_font-medium;
+  }
+
+  .ui-datepicker-buttonpane {
+    border: none;
+
+    .ui-state-default {
+      background: white;
+      border: none;
+    }
+
+    .ui-datepicker-close,
+    .ui-datepicker-current {
+      background: white;
+      color: $_main-color;
+      text-transform: uppercase;
+      border: none;
+      opacity: 1;
+      font-weight:200;
+      outline: none;
+
+      &amp;:hover {
+        opacity:.7;
+      }
+    }
+  }
+
+ }" data-collapsed="@mixin _md-datepicker() { ... }"><code>@mixin _md-datepicker() { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-datepicker"><code>md-datepicker</code></a></li></ul></section><section class="main__item container item" id="mixin-_jquery-ui-datepicker"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_jquery-ui-datepicker">_jquery-ui-datepicker</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _jquery-ui-datepicker() { 
+  /*!
+ * jQuery UI Datepicker @VERSION
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/datepicker/#theming
+ */
+  .ui-datepicker {
+    width: $width;
+    padding: .2em .2em 0;
+    display: none;
+
+  }
+  .ui-datepicker .ui-datepicker-header {
+    position: relative;
+    padding: .2em 0;
+  }
+  .ui-datepicker .ui-datepicker-prev,
+  .ui-datepicker .ui-datepicker-next {
+    position: absolute;
+    top: 2px;
+    width: 1.8em;
+    height: 1.8em;
+  }
+  .ui-datepicker .ui-datepicker-prev-hover,
+  .ui-datepicker .ui-datepicker-next-hover {
+    top: 1px;
+  }
+  .ui-datepicker .ui-datepicker-prev {
+    left: 2px;
+  }
+  .ui-datepicker .ui-datepicker-next {
+    right: 2px;
+  }
+  .ui-datepicker .ui-datepicker-prev-hover {
+    left: 1px;
+  }
+  .ui-datepicker .ui-datepicker-next-hover {
+    right: 1px;
+  }
+  .ui-datepicker .ui-datepicker-prev span,
+  .ui-datepicker .ui-datepicker-next span {
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-left: -8px;
+    top: 50%;
+    margin-top: -8px;
+  }
+  .ui-datepicker .ui-datepicker-title {
+    margin: 0 2.3em;
+    line-height: 1.8em;
+    text-align: center;
+  }
+  .ui-datepicker .ui-datepicker-title select {
+    font-size: 1em;
+    margin: 1px 0;
+  }
+  .ui-datepicker select.ui-datepicker-month,
+  .ui-datepicker select.ui-datepicker-year {
+    width: 45%;
+  }
+  .ui-datepicker table {
+    width: 100%;
+    font-size: .9em;
+    border-collapse: collapse;
+    margin: 0 0 .4em;
+  }
+  .ui-datepicker th {
+    padding: .7em .3em;
+    text-align: center;
+    font-weight: bold;
+    border: 0;
+  }
+  .ui-datepicker td {
+    border: 0;
+    padding: 1px;
+  }
+  .ui-datepicker td span,
+  .ui-datepicker td a {
+    display: block;
+    padding: .2em;
+    text-align: right;
+    text-decoration: none;
+  }
+  .ui-datepicker .ui-datepicker-buttonpane {
+    background-image: none;
+    margin: .7em 0 0 0;
+    padding: 0 .2em;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+  }
+  .ui-datepicker .ui-datepicker-buttonpane button {
+    float: right;
+    margin: .5em .2em .4em;
+    cursor: pointer;
+    padding: .2em .6em .3em .6em;
+    width: auto;
+    overflow: visible;
+  }
+  .ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
+    float: left;
+  }
+
+  /* with multiple calendars */
+  .ui-datepicker.ui-datepicker-multi {
+    width: auto;
+  }
+  .ui-datepicker-multi .ui-datepicker-group {
+    float: left;
+  }
+  .ui-datepicker-multi .ui-datepicker-group table {
+    width: 95%;
+    margin: 0 auto .4em;
+  }
+  .ui-datepicker-multi-2 .ui-datepicker-group {
+    width: 50%;
+  }
+  .ui-datepicker-multi-3 .ui-datepicker-group {
+    width: 33.3%;
+  }
+  .ui-datepicker-multi-4 .ui-datepicker-group {
+    width: 25%;
+  }
+  .ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header,
+  .ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {
+    border-left-width: 0;
+  }
+  .ui-datepicker-multi .ui-datepicker-buttonpane {
+    clear: left;
+  }
+  .ui-datepicker-row-break {
+    clear: both;
+    width: 100%;
+    font-size: 0;
+  }
+
+  /* RTL support */
+  .ui-datepicker-rtl {
+    direction: rtl;
+  }
+  .ui-datepicker-rtl .ui-datepicker-prev {
+    right: 2px;
+    left: auto;
+  }
+  .ui-datepicker-rtl .ui-datepicker-next {
+    left: 2px;
+    right: auto;
+  }
+  .ui-datepicker-rtl .ui-datepicker-prev:hover {
+    right: 1px;
+    left: auto;
+  }
+  .ui-datepicker-rtl .ui-datepicker-next:hover {
+    left: 1px;
+    right: auto;
+  }
+  .ui-datepicker-rtl .ui-datepicker-buttonpane {
+    clear: right;
+  }
+  .ui-datepicker-rtl .ui-datepicker-buttonpane button {
+    float: left;
+  }
+  .ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current,
+  .ui-datepicker-rtl .ui-datepicker-group {
+    float: right;
+  }
+  .ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header,
+  .ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header {
+    border-right-width: 0;
+    border-left-width: 1px;
+  }
+
+ }" data-collapsed="@mixin _jquery-ui-datepicker() { ... }"><code>@mixin _jquery-ui-datepicker() { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-datepicker"><code>md-datepicker</code></a></li></ul></section><section class="main__item container item" id="mixin-md-datepicker"><h3 class="item__heading"><a class="item__name" href="#mixin-md-datepicker">md-datepicker</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin md-datepicker($width, $map) { 
+  @include _jquery-ui-datepicker($width);
+  @include _md-datepicker($width,$map);
+
+  md-datepicker{
+    &amp;&gt;.native,&amp;&gt;.desktop{
+      display:none;
+    }
+  }
+
+  @content;
+ }" data-collapsed="@mixin md-datepicker($width, $map) { ... }"><code>@mixin md-datepicker($width, $map) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$width</code></th><td data-label="desc"><p>(325px) - component width</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive). Role: css</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>md-datepicker();</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_jquery-ui-datepicker"><code>_jquery-ui-datepicker</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_md-datepicker"><code>_md-datepicker</code></a></li></ul></section><section class="main__item container item" id="mixin-_md-dialog"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_md-dialog">_md-dialog</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _md-dialog($map) { 
+  $_bottom:map-get-default($map,bottom,0);
+  $_width:map-get-default($map,width,500px);
+  $_height:map-get-default($map,height,600px);
+  $_background:map-get-default($map,background,#fff);
+  $_z-index:map-get-default($map,z-index,4);
+  $_font-family:map-get-default($map,font-family,&#39;robotoregular&#39;);
+  $_depth:map-get-default($map,depth,map-get($MD-Depth,3));
+  $_header-height:map-nested-get-default($map,header,height,42px);
+  $_header-padding:map-nested-get-default($map,header,padding,0 1em);
+  $_header-font-family:map-nested-get-default($map,header,font-family,&#39;robotomedium&#39;);
+  $_header-color:map-nested-get-default($map,header,color,map-nested-get($MD-Color,blue,value));
+  $_header-h6-margin:map-nested-get-default($map,header,h6-margin,0 0 0 1.5em);
+  $_content-padding:map-nested-get-default($map,content,padding,0);
+
+  $_calc-width:$_width/2;
+  $_margin-top:$_header-height + 3;
+
+  position:fixed;
+  display:none;
+  bottom:$_bottom;
+  left:calc(50% - #{$_calc-width});
+  width:$_width;
+  height:$_height;
+  background:$_background;
+  box-shadow:$_depth;
+  z-index:$_z-index;
+  font-family:$_font-family;
+
+  &amp;&gt;.header{
+    z-index:1;
+    @include flexbox($justification:flex-start,$alignment:center);
+    position:absolute;
+    height:$_header-height;
+    width:100%;
+    padding:$_header-padding;
+    font-family:$_header-font-family;
+    background:$_header-color;
+
+    &amp;&gt;span[dialog-action]{
+      margin-left:auto;
+      font-size:12px;
+      text-transform: uppercase;
+      cursor:pointer;
+      &amp;:hover{
+        opacity:.75;
+      }
+    }
+    &amp;&gt;h6{
+      margin:$_header-h6-margin;
+      padding:0;
+      font-size:1em;
+      font-family:$_header-font-family;
+    }
+    span[close]{
+      font-size:18px;
+      cursor:pointer;
+      &amp;:hover{
+        opacity:.75;
+      }
+    }
+  }
+  &amp;&gt;.content{
+    margin-top:$_margin-top;
+    height:100%;
+    width:100%;
+    padding:$_content-padding;
+    overflow-y:scroll;
+  }
+  @include small-content(){
+    height:100%;
+    width:100%;
+    left:0;
+  }
+ }" data-collapsed="@mixin _md-dialog($map) { ... }"><code>@mixin _md-dialog($map) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-dialog"><code>md-dialog</code></a></li></ul></section><section class="main__item container item" id="mixin-md-dialog"><h3 class="item__heading"><a class="item__name" href="#mixin-md-dialog">md-dialog</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin md-dialog($class, $map) { 
+  $tag:md-dialog;
+  @include element-tag($tag:$tag,$class:$class){
+    @include _md-dialog($map);
+    @content;
+  }
+ }" data-collapsed="@mixin md-dialog($class, $map) { ... }"><code>@mixin md-dialog($class, $map) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$class</code></th><td data-label="desc"><p>class scope</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive). Role: css</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>md-dialog($map:(height:500px))</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_md-dialog"><code>_md-dialog</code></a></li></ul></section><section class="main__item container item" id="mixin-_md-dropdown"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_md-dropdown">_md-dropdown</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _md-dropdown($map) { 
+  $_border-radius:map-get-default($map,border-radius,2px);
+  $_z-index:map-get-default($map,z-index,10);
+  $_background:map-get-default($map,background,#fff);
+  $_border:map-get-default($map,border,#fff);
+  $_font-size:map-get-default($map,font-size,14px);
+  $_font-family:map-get-default($map,font-family,&#39;robotoregular&#39;);
+  $_padding:map-get-default($map,padding,1em .5em);
+  $_min-width:map-get-default($map,min-width,10em);
+  $_divider-border:map-get-default($map,divider-border,#eaeaea);
+  $_item-padding:map-nested-get-default($map,item,padding,.5em);
+  $_item-color:map-nested-get-default($map,item,color,#515151);
+  $_item-line-height:map-nested-get-default($map,item,line-height,24px);
+  $_item-background-hover:map-nested-get-default($map,item,background-hover,#e7e7e7);
+  $_item-icon-margin:map-nested-get-default($map,item,icon-margin,0 .5em 0 0);
+
+  border-radius:$_border-radius;
+  position:absolute;
+  z-index:$_z-index;
+  top:100%;
+  left:0;
+  background:$_background;
+  border:$_border;
+  min-width:$_min-width;
+  font-size:$_font-size;
+  outline:0;
+  box-shadow:map-get($MD-Depth,3);
+  display:none;
+  font-family:$_font-family;
+  &amp;&gt;header{
+    display:block;
+    padding:$_padding;
+  }
+  &amp;&gt;footer{
+    display:block;
+    padding:$_padding;
+  }
+  &amp;&gt;menu-item{
+    @include flexbox();
+    @include span-icon(){
+      margin:$_item-icon-margin;
+    }
+    padding:$_item-padding;
+    color:$_item-color;
+    line-height:$_item-line-height;
+    &amp;&gt;a{
+      color:$_item-color;
+    }
+    &amp;:hover{
+      background:$_item-background-hover;
+      cursor:pointer;
+    }
+  }
+  &amp;&gt;menu-divider{
+    width: 100%;
+    height: 0;
+    border: 0;
+    border-bottom: 1px solid $_divider-border;
+    padding: 0;
+    display:list-item;
+  }
+ }" data-collapsed="@mixin _md-dropdown($map) { ... }"><code>@mixin _md-dropdown($map) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-dropdown"><code>md-dropdown</code></a></li></ul></section><section class="main__item container item" id="mixin-md-dropdown"><h3 class="item__heading"><a class="item__name" href="#mixin-md-dropdown">md-dropdown</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin md-dropdown($class, $map) { 
+  $tag:md-dropdown;
+  @include element-tag($tag,$tags,$class){
+    @include _md-dropdown($map);
+    @content;
+  }
+  [dropdown]{
+    position:relative;
+  }
+ }" data-collapsed="@mixin md-dropdown($class, $map) { ... }"><code>@mixin md-dropdown($class, $map) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$class</code></th><td data-label="desc"><p>class scope</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive). Role: css</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>md-dropdown()</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_md-dropdown"><code>_md-dropdown</code></a></li></ul></section><section class="main__item container item" id="mixin-_md-fab-transform"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_md-fab-transform">_md-fab-transform</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _md-fab-transform() { 
+  position:relative;
+ }" data-collapsed="@mixin _md-fab-transform() { ... }"><code>@mixin _md-fab-transform() { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-fab-transform"><code>md-fab-transform</code></a></li></ul></section><section class="main__item container item" id="mixin-md-fab-transform"><h3 class="item__heading"><a class="item__name" href="#mixin-md-fab-transform">md-fab-transform</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin md-fab-transform($class) { 
+  $tag:md-fab-transform;
+  @include element-tag($tag:$tag,$class:$class){
+    @include _md-fab-transform();
+    @content;
+  }
+ }" data-collapsed="@mixin md-fab-transform($class) { ... }"><code>@mixin md-fab-transform($class) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$class</code></th><td data-label="desc"><p>class scope</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive). Role: css</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>my-fab=transform(){ @include md-fab(); }</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_md-fab-transform"><code>_md-fab-transform</code></a></li></ul></section><section class="main__item container item" id="mixin-_md-fab"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_md-fab">_md-fab</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _md-fab($map) { 
+  $_position:map-get-default($map,position,fixed);
+  $_z-index:map-get-default($map,z-index,100);
+  $_top:map-get($map,top);
+  $_bottom:map-get-default($map,bottom,5%);
+  $_right:map-get-default($map,right,30px);
+  $_left:map-get($map,left);
+  $_size:map-get-default($map,size,56px);
+  $_elevation:map-get-default($map,elevation,map-get($MD-Depth,1));
+  $_background:map-get-default($map,background,#E91E63);
+  $_color:map-get-default($map,color,#fff);
+
+  cursor:pointer;
+  border-radius:50%;
+  @include flexbox($justification:center,$alignment:center);
+  position:$_position;
+  z-index:$_z-index;
+  @if $_top !=null{
+    top:$_top;
+  }@else{
+    bottom:$_bottom;
+  }
+  @if $_left!=null{
+    left:$_left;
+  }@else{
+    right:$_right;
+  }
+  height:$_size;
+  width:$_size;
+
+  background:$_background;
+  color:$_color;
+  box-shadow:$_elevation;
+
+  &amp;&gt;span{
+    margin:0;
+    padding:0;
+  }
+ }" data-collapsed="@mixin _md-fab($map) { ... }"><code>@mixin _md-fab($map) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-fab"><code>md-fab</code></a></li></ul></section><section class="main__item container item" id="mixin-md-fab"><h3 class="item__heading"><a class="item__name" href="#mixin-md-fab">md-fab</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin md-fab($class, $map) { 
+  $tag:md-fab;
+  @include element-tag($tag:$tag,$class:$class){
+    @include _md-fab($map);
+    @content;
+  }
+ }" data-collapsed="@mixin md-fab($class, $map) { ... }"><code>@mixin md-fab($class, $map) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$class</code></th><td data-label="desc"><p>class scope</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive). Role: css</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>md-fab($map:(extend-color:&#39;.md.yellow&#39;))</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_md-fab"><code>_md-fab</code></a></li></ul></section><section class="main__item container item" id="mixin-md-grid-box"><h3 class="item__heading"><a class="item__name" href="#mixin-md-grid-box">md-grid-box</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin md-grid-box($map) { 
+  $_gutter:map-get-default($map,gutter,30px);
+
+  md-grid-box{
+    @include flexbox();
+    width:100%;
+    @content;
+  }
+  md-column{
+    @include flexbox();
+    @include flex-wrap(wrap);
+    &amp;:first-of-type{
+      padding-right:$_gutter;
+    }
+    &amp;[width-70]{
+      width:70%;
+    }
+    &amp;[width-60]{
+      width:60%;
+    }
+    &amp;[width-50]{
+      width:50%;
+    }
+    &amp;[width-30]{
+      width:30%;
+    }
+    &amp;[width-40]{
+      width:40%;
+    }
+    &amp;[width-100]{
+      width:100%;
+      padding-right:0;
+    }
+  }
+  @include media-breakpoint(1024px){
+    md-grid-box{
+      @include flex-wrap(wrap);
+    }
+    md-column{
+      width:100% !important;
+      padding-right:0 !important;
+    }
+  }
+ }" data-collapsed="@mixin md-grid-box($map) { ... }"><code>@mixin md-grid-box($map) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive). Role: css</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>md-grid-box();</code></pre></div></section><section class="main__item container item" id="mixin-md-grid"><h3 class="item__heading"><a class="item__name" href="#mixin-md-grid">md-grid</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin md-grid($class, $map) { 
+  $_color:lighten(#666,10%);
+  $_pagination-bg:map-deep-get($MD-Color,purple,primary,300,value);
+  $_grid-color:map-deep-get($MD-Color,indigo,primary,300,value);
+
+  $_columns:map-get-default($map,columns,4);
+  $_header-font-family:map-nested-get-default($map,header,font-family,&#39;robotomedium&#39;);
+  $_header-border-bottom:map-nested-get-default($map,header,border-bottom,1px solid #999);
+  $_header-icon-color:map-nested-get-default($map,header,icon-color,#d8d8d8);
+  $_header-active-color:map-nested-get-default($map,header,active,$_grid-color);
+
+  $_section-color:map-nested-get-default($map,section,color,$_color);
+
+  $_pagination-background:map-nested-get-default($map,pagination,background,#fff);
+  $_pagination-color:map-nested-get-default($map,pagination,color,#666);
+  $_pagination-background-active:map-nested-get-default($map,pagination,background-active,$_pagination-bg);
+  $_pagination-color-active:map-nested-get-default($map,pagination,color-active,#fff);
+  $_pagination-refresh:map-nested-get-default($map,pagination,refresh,#bbb);
+
+  @include flex-grid($class:$class,$tags:(md-grid),$map:(cell:(show-borders:false,alt-type:odd),touch:(header-font:&#39;robotomedium&#39;)),$columns:$columns){
+    border:0;
+    &amp;&gt;header{
+      border-bottom:0;
+      &amp;&gt;*{
+        font-family:$_header-font-family;
+        border-left:0 !important;
+        border-right:0;
+        border-bottom:$_header-border-bottom !important;
+        font-size:1em;
+        @include span-icon{
+          margin-left:.25em;
+          color:$_header-icon-color;
+        }
+        &amp;.active{
+          color:$_header-active-color;
+          @include span-icon(){
+            color:$_header-active-color;
+          }
+          border-bottom:3px solid $_header-active-color !important;
+          padding-bottom:2px;
+        }
+      }
+    }
+    &amp;&gt;section{
+      color:$_section-color;
+    }
+
+    @content;
+  };
+
+  @include grid-pagination(){
+    &gt; page-navigation a.control {
+      border:0 !important;
+      box-shadow: map-get($MD-Depth,&#39;05&#39;) !important;
+      @include span-icon(){
+        font-size:18px;
+      }
+      &amp;:hover{
+        background:$-pagination-background;
+        color:$_pagination-color !important;
+        &amp;&gt;span{
+          color:$_pagination-color !important;
+        }
+      }
+    }
+    &gt; page-navigation a.page.active {
+      border:0 !important;
+      box-shadow: map-get($MD-Depth,&#39;05&#39;) !important;
+      background:$_pagination-background-active !important;
+      &amp;:hover{
+        border:0 !important;
+        color:$_pagination-color-active !important;
+        &amp;&gt;span{
+          color:$_pagination-color-active !important
+        }
+      }
+    }
+    &gt; page-navigation a.page {
+      border:0 !important;
+      border-radius:50%;
+      &amp;&gt;span{
+        border-radius:50%;
+      }
+      &amp;:hover{
+        border:0 !important;
+        background:$_pagination-background;
+        color:$_pagination-color !important;
+        &amp;&gt;span{
+          color:$_pagination-color !important;
+        }
+      }
+    }
+    [refresh]{
+      margin-right:2em;
+      border-radius:50%;
+      &amp;:hover{
+        color:$_pagination-refresh !important;
+      }
+    }
+    page-info{
+      &amp;&gt;div{
+        font-size:14px !important;
+      }
+    }
+  };
+
+ }" data-collapsed="@mixin md-grid($class, $map) { ... }"><code>@mixin md-grid($class, $map) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$class</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive). Role: css</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>md-grid($map:(columns:7))</code></pre></div></section><section class="main__item container item" id="mixin-_md-icon-badge"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_md-icon-badge">_md-icon-badge</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _md-icon-badge($map) { 
+  $_size:map-get-default($map,size,24px);
+  $_margin:map-get-default($map,margin,0);
+  $_color:map-get-default($map,color,#fff);
+  $_top:map-nested-get-default($map,badge,top,-.2em);
+  $_left:map-nested-get-default($map,badge,left,-.7em);
+
+
+  position:relative;
+  margin:$_margin;
+  height:$_size;
+  width:$_size;
+  display:inline;
+  cursor:pointer;
+  @include span-icon(){
+    color:$_color;
+  }
+  &amp;&gt;md-badge,&amp;&gt;.md-badge{
+    position:absolute;
+    top: $_top;
+    left: $_left;
+  }
+ }" data-collapsed="@mixin _md-icon-badge($map) { ... }"><code>@mixin _md-icon-badge($map) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-icon-badge"><code>md-icon-badge</code></a></li></ul></section><section class="main__item container item" id="mixin-md-icon-badge"><h3 class="item__heading"><a class="item__name" href="#mixin-md-icon-badge">md-icon-badge</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin md-icon-badge($class, $map) { 
+
+  md-icon-badge,.md-icon-badge{
+    @if $class != null{
+      &amp;.#{$class} {
+        @include _md-icon-badge($map);
+        @content;
+      }
+    }@else{
+      @include _md-icon-badge($map);
+      @content;
+    }
+  }
+ }" data-collapsed="@mixin md-icon-badge($class, $map) { ... }"><code>@mixin md-icon-badge($class, $map) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$class</code></th><td data-label="desc"><p>class scope</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive). Role: css</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>md-icon-badge(){@extend .md.indigo; }</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_md-icon-badge"><code>_md-icon-badge</code></a></li></ul></section><section class="main__item container item" id="mixin-md-icon-card"><h3 class="item__heading"><a class="item__name" href="#mixin-md-icon-card">md-icon-card</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin md-icon-card($map) { 
+  $_width:map-get-default($map,width,100%);
+  $_height:map-get-default($map,height,10em);
+  $_icon-size:map-nested-get-default($map,icon,size,72px);
+  $_span-size:map-get-default($map,span-size,14px);
+  $_breakpoint-large-width:map-default-deep-get($map,100%,breakpoint,large,width);
+  $_breakpoint-large-icon-size:map-default-deep-get($map,72px,breakpoint,large,icon-size);
+  $_breakpoint-large-header-size:map-deep-get($map,breakpoint,large,header-size);
+  $_breakpoint-medium-width:map-default-deep-get($map,100%,breakpoint,medium,width);
+  $_breakpoint-medium-icon-size:map-default-deep-get($map,72px,breakpoint,medium,icon-size);
+  $_breakpoint-medium-header-size:map-deep-get($map,breakpoint,medium,header-size);
+  $_breakpoint-small-width:map-default-deep-get($map,100%,breakpoint,small,width);
+  $_breakpoint-small-icon-size:map-default-deep-get($map,72px,breakpoint,small,icon-size);
+  $_breakpoint-small-header-size:map-deep-get($map,breakpoint,small,header-size);
+
+
+
+  md-icon-card{
+    font-family:map-get($Roboto,regular);
+    @include flexbox($justification:space-around,$alignment:center);
+    width:$_width;
+    height:$_height;
+    @include span-icon(){
+      font-size:$_icon-size;
+    }
+    .card-text{
+      h2{
+        margin:0 0 -4px 0;
+      }
+      span{
+        font-size:$_span-size;
+      }
+    }
+    @content;
+
+    @include large-content() {
+      width:$_breakpoint-large-width;
+      @include span-icon(){
+        font-size:$_breakpoint-large-icon-size;
+      }
+      .card-text{
+        h2{
+          font-size:$_breakpoint-large-header-size;
+          @if $_breakpoint-large-header-size !=null{
+            font-size:$_breakpoint-large-header-size;
+          }
+        }
+      }
+    }
+    @include medium-content(){
+      width:$_breakpoint-medium-width;
+      @include span-icon(){
+        font-size:$_breakpoint-medium-icon-size;
+      }
+      .card-text{
+        h2{
+          font-size:$_breakpoint-medium-header-size;
+          @if $_breakpoint-medium-header-size !=null{
+            font-size:$_breakpoint-medium-header-size;
+          }
+        }
+      }
+    }
+    @include small-content(){
+      width:$_breakpoint-small-width;
+      @include span-icon(){
+        font-size:$_breakpoint-small-icon-size;
+      }
+      .card-text{
+        h2{
+          font-size:$_breakpoint-small-header-size;
+          @if $_breakpoint-small-header-size !=null{
+            font-size:$_breakpoint-small-header-size;
+          }
+        }
+      }
+    }
+  }
+ }" data-collapsed="@mixin md-icon-card($map) { ... }"><code>@mixin md-icon-card($map) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive). Role: css</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>md-icon-card($map:(width:300px,height:100px))</code></pre></div></section><section class="main__item container item" id="mixin-_md-layout"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_md-layout">_md-layout</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _md-layout($map) { 
+
+  $_side-panel-width:map-nested-get-default($map,side-panel,width,225px);
+  $_side-panel-background:map-nested-get-default($map,side-panel,background,#f6f6f6);
+  $_side-panel-padding:map-nested-get-default($map,side-panel,padding,1em 0 0 1em);
+  $_main-panel-background:map-nested-get-default($map,main-panel,background,#fff);
+
+  @include flexbox();
+  max-height:100%;
+  height:100%;
+  width:100%;
+  overflow:hidden;
+  &amp;&gt;side-panel{
+    min-width:$_side-panel-width;
+    background:$_side-panel-background;
+    height:100%;
+    position:relative;
+    @include flexbox-column();
+    padding:$_side-panel-padding;
+  }
+  &amp;&gt;main-panel{
+    position:relative;
+    display:block;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    height:100%;
+    @include flex-grow(4);
+    -webkit-overflow-scrolling: touch;
+    background:$_main-panel-background;
+    padding-bottom:2em;
+    &amp;[scroll]{
+      padding-bottom:20em;
+    }
+  }
+
+
+ }" data-collapsed="@mixin _md-layout($map) { ... }"><code>@mixin _md-layout($map) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-layout"><code>md-layout</code></a></li></ul></section><section class="main__item container item" id="mixin-md-layout"><h3 class="item__heading"><a class="item__name" href="#mixin-md-layout">md-layout</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin md-layout($class, $map) { 
+  $tag:md-layout;
+  @include element-tag($tag,$tags,$class){
+    @include _md-layout($map);
+    @content;
+  }
+ }" data-collapsed="@mixin md-layout($class, $map) { ... }"><code>@mixin md-layout($class, $map) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$class</code></th><td data-label="desc"><p>class scope</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive). Role: css</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>md-bar()</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_md-layout"><code>_md-layout</code></a></li></ul></section><section class="main__item container item" id="mixin-_md-list"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_md-list">_md-list</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _md-list($map) { 
+  $_nth-type-1-default:map-deep-get($MD-Color,blue,value);
+  $_nth-type-2-default:map-deep-get($MD-Color,light-green,primary,400,value);
+  $_nth-type-3-default:map-deep-get($MD-Color,red,value);
+  $_nth-type-4-default:map-deep-get($MD-Color,yellow,value);
+
+  $_font-size:map-get-default($map,font-size,14px);
+  $_padding:map-nested-get-default($map,item,padding,.5em 3em .5em 1em);
+  $_border-bottom:map-nested-get-default($map,item,border-bottom,1px solid #f0f0f0);
+  $_nth-type-1:map-nested-get-default($map,item,n-type-1,$_nth-type-1-default);
+  $_nth-type-2:map-nested-get-default($map,item,n-type-1,$_nth-type-2-default);
+  $_nth-type-3:map-nested-get-default($map,item,n-type-1,$_nth-type-3-default);
+  $_nth-type-4:map-nested-get-default($map,item,n-type-1,$_nth-type-4-default);
+
+  @include flexbox-column();
+  &amp;&gt;li{
+    font-size:14px;
+    @include flexbox($justification:space-between);
+    list-style: none;
+    width:100%;
+    padding:$_padding;
+    border-bottom:$_border-bottom;
+
+    &amp;:nth-of-type(4n + 1){
+      border-left:2px solid $_nth-type-1;
+    }
+    &amp;:nth-of-type(4n + 2){
+      border-left:2px solid $_nth-type-2;
+    }
+    &amp;:nth-of-type(4n + 3){
+      border-left:2px solid $_nth-type-3;
+    }
+    &amp;:nth-of-type(4n + 4){
+      border-left:2px solid $_nth-type-4;
+    }
+  }
+ }" data-collapsed="@mixin _md-list($map) { ... }"><code>@mixin _md-list($map) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-list"><code>md-list</code></a></li></ul></section><section class="main__item container item" id="mixin-md-list"><h3 class="item__heading"><a class="item__name" href="#mixin-md-list">md-list</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin md-list($class, $map) { 
+  $tag:md-list;
+  @include element-tag($tag,$tags,$class){
+    @include _md-list($map);
+    @content;
+  }
+ }" data-collapsed="@mixin md-list($class, $map) { ... }"><code>@mixin md-list($class, $map) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$class</code></th><td data-label="desc"><p>class scope</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive). Role: css</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>md-list()</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_md-list"><code>_md-list</code></a></li></ul></section><section class="main__item container item" id="mixin-_menu-dropdown"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_menu-dropdown">_menu-dropdown</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _menu-dropdown() { 
+  display: list-item;
+  list-style: none;
+  box-shadow:none;
+  &amp;&gt;menu-item{
+    display: list-item;
+    width:100%;
+  }
+  @include transition(all 350ms);
+ }" data-collapsed="@mixin _menu-dropdown() { ... }"><code>@mixin _menu-dropdown() { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-_md-menu"><code>_md-menu</code></a></li></ul></section><section class="main__item container item" id="mixin-_md-menu"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_md-menu">_md-menu</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _md-menu($map) { 
+  $_expand-icon:map-get($MD-Icons,add);
+  $_min-icon:map-get($MD-Icons,remove);
+  $_next-icon:map-get($MD-Icons,navigate-next);
+
+  $_icon-font:&#39;material&#39;;
+  $_padding:map-get-default($map,padding,0);
+  $_margin:map-get-default($map,margin,1em 0 0 0);
+  $_transition:map-nested-get-default($map,item,header-transition,all 350ms);
+  $_icon-margin:map-nested-get-default($map,item,header-icon-margin,0 .25em 0 0);
+  $_header-padding:map-nested-get-default($map,item,header-padding,.5em 0 .5em 1em);
+  $_item-dropdown-padding:map-nested-get-default($map,item,dropdown-padding,0 0 0 1.5em);
+  $_item-dropdown-item-padding:map-nested-get-default($map,item,dropdown-item-padding,.5em .5em .5em 1.5em);
+  $_header-expand-icon:map-nested-get-default($map,icon,expand,$_expand-icon);
+  $_header-minimize-icon:map-nested-get-default($map,icon,minimize,$_min-icon);
+  $_icon-right:map-nested-get-default($map,icon,next,$_next-icon);
+
+  background:inherit;
+  margin: $_margin;
+  padding:$_padding;
+  height: 100%;
+  display:block;
+  width:100%;
+
+  &amp;&gt;menu-item{
+    position:relative;
+    background:none;
+
+    &amp;&gt;header{
+      padding:$_header-padding;
+      width:100%;
+      position:relative;
+      @include transition($_transition);
+      @extend %#{$header-component}-font !optional;
+      &amp;&gt;span{
+        margin:$_icon-margin;
+        @extend %#{$header-component}-icon !optional;
+      }
+      &amp;&gt;a{
+        @extend %#{$header-component}-font !optional;
+      }
+      &amp;:hover{
+        cursor:pointer;
+        @extend %#{$header-component}-background-hover !optional;
+        @extend %#{$header-component}-font-hover !optional;
+        &amp;&gt;a{
+          @extend %#{$header-component}-font-hover !optional;
+        }
+        &amp;&gt;span{
+          @extend %#{$header-component}-icon-hover !optional;
+        }
+        &amp;.dropdown{
+          &amp;:after{
+            @extend %#{$header-component}-icon-hover !optional;
+          }
+        }
+      }
+      &amp;.active{
+        @extend %#{$header-component}-background-active !optional;
+        @extend %#{$header-component}-font-active !optional;
+        &amp;&gt;a{
+          @extend %#{$header-component}-font-active !optional;
+        }
+        &amp;&gt;span{
+          @extend %#{$header-component}-icon-active !optional;
+        }
+      }
+      &amp;.dropdown{
+        &amp;:after{
+          font-family:$_icon-font;
+          position:absolute;
+          content:$_header-expand-icon;
+          right:.5em;
+          top:.75em;
+          @extend %#{$header-component}-icon !optional;
+        }
+      }
+    }
+
+    &amp;&gt;menu-dropdown{
+      position:relative;
+      padding:$_item-dropdown-padding;
+      background:inherit;
+      @include _menu-dropdown();
+    }
+
+    &amp;.expand{
+      @extend %#{$component}-background !optional;
+      &amp;&gt;header{
+        @extend %#{$header-component}-background-hover !optional;
+        @extend %#{$header-component}-font-hover !optional;
+      }
+      &amp;&gt;menu-dropdown{
+        padding:$_item-dropdown-padding;
+        &amp;&gt;menu-item{
+          font-size:.9em;
+          padding: $_item-dropdown-item-padding;
+          &amp;&gt;a{
+            font-size:.9em;
+            position:relative;
+            @extend %#{$component}-font !optional;
+
+            &amp;:hover{
+              @extend %#{$component}-font-hover !optional;
+            }
+            &amp;.active{
+              @extend %#{$component}-font-active !optional;
+            }
+            &amp;:before{
+              position:absolute;
+              left:-20px;
+              font-family:$_icon-font;
+              content:$_icon-right;
+            }
+          }
+        }
+      }
+      .dropdown{
+        &amp;:after{
+          content:$_header-minimize-icon;
+          @extend %#{$header-component}-icon-hover !optional;
+        }
+      }
+    }
+
+    header + menu-dropdown{
+      height: 0;
+      display:block;
+      overflow: hidden;
+    }
+    &amp;.expand header + menu-dropdown{
+      height:auto;
+      overflow: hidden;
+    }
+    &amp;:last-child{
+      &amp;&gt;menu-dropdown{
+        margin-bottom:0;
+      }
+    }
+  }
+ }" data-collapsed="@mixin _md-menu($map) { ... }"><code>@mixin _md-menu($map) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_menu-dropdown"><code>_menu-dropdown</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-menu"><code>md-menu</code></a></li></ul></section><section class="main__item container item" id="mixin-md-menu"><h3 class="item__heading"><a class="item__name" href="#mixin-md-menu">md-menu</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin md-menu($component, $header-component, $class, $map) { 
+  $tag:md-menu;
+  @include element-tag($tag:$tag,$class:$class){
+    @include _md-menu($component,$header-component,$map);
+    @content;
+  }
+ }" data-collapsed="@mixin md-menu($component, $header-component, $class, $map) { ... }"><code>@mixin md-menu($component, $header-component, $class, $map) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>md-menu imports theme</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$component</code></th><td data-label="desc"><p>(md-menu) - sass component placeholders</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$header-component</code></th><td data-label="desc"><p>(md-menu-header) - sass component placeholders</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$class</code></th><td data-label="desc"><p>class scope</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive). Role: css</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>md-menu($map:($component:my-component,$header-component:my-header-component,$dropdown:()))</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_md-menu"><code>_md-menu</code></a></li></ul></section><section class="main__item container item" id="mixin-nav-list"><h3 class="item__heading"><a class="item__name" href="#mixin-nav-list">nav-list</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin nav-list($map) { 
+  $_padding:map-get-default($map,padding,.5em .5em .5em 0);
+
+  nav-list{
+    @include flexbox-column();
+    &amp;&gt;menu-item{
+      @include flexbox($alignment:center);
+      &amp;.space-between{
+        @include justify-content(space-between);
+      }
+      &amp;.space-around{
+        @include justify-content(space-around);
+      }
+      padding:$_padding;
+      position:relative;
+    }
+    @content;
+  }
+
+ }" data-collapsed="@mixin nav-list($map) { ... }"><code>@mixin nav-list($map) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive). Role: css</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>nav-list()</code></pre></div></section><section class="main__item container item" id="mixin-md-ripple-effect"><h3 class="item__heading"><a class="item__name" href="#mixin-md-ripple-effect">md-ripple-effect</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin md-ripple-effect() { 
+  @-webkit-keyframes ripple-animation {
+    0% {
+      -webkit-transform: scale(.01);
+      transform: scale(.01);
+    }
+
+    100% {
+      -webkit-transform: scale(5);
+      transform: scale(5);
+    }
+  }
+
+  @keyframes ripple-animation {
+    0% {
+      -webkit-transform: scale(.01);
+      transform: scale(.01);
+    }
+
+    100% {
+      -webkit-transform: scale(5);
+      transform: scale(5);
+    }
+  }
+  .ripple-wrap-class{
+    @include transform(translateZ(0));
+  }
+ }" data-collapsed="@mixin md-ripple-effect() { ... }"><code>@mixin md-ripple-effect() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>material design ripple keyframe animation</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>md-ripple-effect()</code></pre></div></section><section class="main__item container item" id="mixin-_paper-header-md-toolbar"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_paper-header-md-toolbar">_paper-header-md-toolbar</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _paper-header-md-toolbar() { 
+  paper-header-panel.paper-header-panel-0 .paper-header:after {
+    box-shadow:none !important;
+
+  }
+ }" data-collapsed="@mixin _paper-header-md-toolbar() { ... }"><code>@mixin _paper-header-md-toolbar() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>disable polymer paper-header box-shadow</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-toolbar"><code>md-toolbar</code></a></li></ul></section><section class="main__item container item" id="mixin-_md-toolbar"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_md-toolbar">_md-toolbar</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _md-toolbar($map) { 
+  $_height:map-get-default($map,height,56px);
+  $_padding:map-get-default($map,padding,0 6em 0 1em);
+  $_position:map-get($map,position);
+  $_top:map-get($map,top);
+  $_bottom:map-get($map,bottom);
+  $_z-index:map-get-default($map,z-index,10);
+  $_box-shadow:map-get-default($map,box-shadow,0 2px 5px rgba(0,0,0,0.26));
+
+  height:$_height;
+  padding:$_padding;
+  @include flexbox($justification:space-between,$alignment:center);
+
+  @if $_position !=null{
+    position:$_position;
+    left:0;
+
+  }
+  @if $_top !=null{
+    top:$_top;
+  }
+  @if $_bottom !=null{
+    top:$_bottom;
+  }
+  z-index:$_z-index;
+  box-shadow:$_box-shadow;
+
+  @include touch-content(){
+    padding-right:1em;
+  }
+
+
+ }" data-collapsed="@mixin _md-toolbar($map) { ... }"><code>@mixin _md-toolbar($map) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-toolbar"><code>md-toolbar</code></a></li></ul></section><section class="main__item container item" id="mixin-md-toolbar"><h3 class="item__heading"><a class="item__name" href="#mixin-md-toolbar">md-toolbar</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin md-toolbar($class, $map) { 
+  $tag:md-toolbar;
+  @include element-tag($tag:$tag,$class:$class){
+    @include _md-toolbar($map);
+    @content;
+  }
+  @include _paper-header-md-toolbar();
+ }" data-collapsed="@mixin md-toolbar($class, $map) { ... }"><code>@mixin md-toolbar($class, $map) { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$class</code></th><td data-label="desc"><p>class scope</p></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive). Role: css</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>md-toolbar(){ @extend .md.blue; }</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_md-toolbar"><code>_md-toolbar</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_paper-header-md-toolbar"><code>_paper-header-md-toolbar</code></a></li></ul></section><section class="main__item container item" id="mixin-_md-radio"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_md-radio">_md-radio</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _md-radio($map) { 
+  $_label:map-get-default($map,label,map-get($Palette,label));
+  $_primary:map-get-default($map,primary,map-get($Palette,primary));
+  $_secondary:map-get-default($map,secondary,map-get($Palette,primary-3));
+  $_placeholder:map-get-default($map,placeholder,map-get($Palette,placeholder));
+  $_disabled:map-get-default($map,disabled,map-get($Palette,hint));
+
+  md-radio{
+    visibility: hidden;
+    @content;
+    &amp;.margin-left{
+      margin-left:.5em;
+    }
+  }
+  [type=&quot;radio&quot;]:not(:checked),
+  [type=&quot;radio&quot;]:checked {
+    position: absolute;
+    left: -9999px;
+    visibility: hidden;
+  }
+
+  [type=&quot;radio&quot;]:not(:checked) + label,
+  [type=&quot;radio&quot;]:checked + label {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    font-size: 1em;
+    @include transition(.28s ease);
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+  }
+
+  [type=&quot;radio&quot;] + label:before,
+  [type=&quot;radio&quot;] + label:after {
+    content: &#39;&#39;;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 4px;
+    width: 16px;
+    height: 16px;
+    z-index: 0;
+    @include transition(.28s ease);
+  }
+
+
+  /* Unchecked styles */
+  [type=&quot;radio&quot;]:not(:checked) + label:before {
+    border-radius: 50%;
+    border: 2px solid $_label;
+  }
+  [type=&quot;radio&quot;]:not(:checked) + label:after {
+    border-radius: 50%;
+    border: 2px solid $_label;
+    z-index: -1;
+
+    @include transform(scale(0));
+  }
+
+  /* Checked styles */
+  [type=&quot;radio&quot;]:checked + label:before {
+    border-radius: 50%;
+    border: 2px solid transparent;
+  }
+  [type=&quot;radio&quot;]:checked + label:after {
+    border-radius: 50%;
+    border: 2px solid $_secondary;
+    background-color: $_secondary;
+    z-index: 0;
+    @include transform(scale(1.02));
+  }
+
+  /* Radio With concentric gap */
+  [type=&quot;radio&quot;].concentric:checked + label:before {
+    border-radius: 50%;
+    border: 2px solid $_secondary;
+  }
+  [type=&quot;radio&quot;].concentric:checked + label:after {
+    border-radius: 50%;
+    border: 2px solid $_secondary;
+    background-color: $_secondary;
+    z-index: 0;
+    @include transform(scale(.5));
+  }
+
+  /* Disabled Radio With concentric gap */
+  [type=&quot;radio&quot;].concentric:disabled:checked + label:before {
+    border: 2px solid $_disabled;
+  }
+  [type=&quot;radio&quot;].concentric:disabled:checked + label:after {
+    border: none;
+    background-color: $_disabled;
+  }
+
+  /* Disabled style */
+  [type=&quot;radio&quot;]:disabled:not(:checked) + label:before,
+  [type=&quot;radio&quot;]:disabled:checked + label:before {
+    background-color: transparent;
+    border-color: $_disabled;
+  }
+  [type=&quot;radio&quot;]:disabled + label {
+    color: $_disabled;
+  }
+  [type=&quot;radio&quot;]:disabled:not(:checked) + label:before {
+    border-color: $_disabled;
+  }
+  [type=&quot;radio&quot;]:disabled:checked + label:after {
+    background-color: $_disabled;
+    border-color: $_disabled;
+  }
+ }" data-collapsed="@mixin _md-radio($map) { ... }"><code>@mixin _md-radio($map) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>_md-radio</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive).<h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-radio"><code>md-radio</code></a></li></ul></p></section><section class="main__item container item" id="mixin-_md-checkbox"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_md-checkbox">_md-checkbox</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _md-checkbox($map) { 
+  $_label:map-get-default($map,label,map-get($Palette,label));
+  $_primary:map-get-default($map,primary,map-get($Palette,primary));
+  $_secondary:map-get-default($map,secondary,map-get($Palette,primary-3));
+  $_secondary-text:map-get-default($map,secondary,map-get($Palette,primary-3-text));
+  $_placeholder:map-get-default($map,placeholder,map-get($Palette,placeholder));
+  $_disabled:map-get-default($map,disabled,map-get($Palette,hint));
+
+
+
+  md-checkbox{
+    visibility: hidden;
+    position:relative;
+  }
+  /* Remove default checkbox */
+  [type=&quot;checkbox&quot;]:not(:checked),
+  [type=&quot;checkbox&quot;]:checked {
+    position: absolute;
+    //left: -9999px;
+    visibility: hidden;
+  }
+
+  // Checkbox Styles
+  [type=&quot;checkbox&quot;] {
+
+    // Text Label Style
+    + label {
+      position: relative;
+      padding-left: 30px;
+      cursor: pointer;
+      display: inline-block;
+      height: 25px;
+      line-height: 25px;
+      font-size: 1rem;
+
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -khtml-user-select: none;
+      -ms-user-select: none;
+    }
+
+    /* checkbox aspect */
+    + label:before {
+      content: &#39;&#39;;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 18px;
+      height: 18px;
+      z-index: 0;
+      border: 2px solid $_label;
+      border-radius: 1px;
+      margin-top: 2px;
+      @include transition(.2s);
+    }
+
+    &amp;:not(:checked):disabled + label:before {
+      border: none;
+      background-color: $_label;
+    }
+
+  }
+
+  [type=&quot;checkbox&quot;]:checked {
+    + label:before {
+      top: -4px;
+      left: -3px;
+      width: 12px; height: 22px;
+      border-top: 2px solid transparent;
+      border-left: 2px solid transparent;
+      border-right: 2px solid $_secondary;
+      border-bottom: 2px solid $_secondary;
+      @include transform(rotate(40deg));
+      -webkit-backface-visibility: hidden;
+      @include transform-origin(100% 100%);
+    }
+
+    &amp;:disabled + label:before {
+      border-right: 2px solid $_secondary;
+      border-bottom: 2px solid $_secondary;
+    }
+
+  }
+
+  /* Indeterminate checkbox */
+  [type=&quot;checkbox&quot;]:indeterminate {
+    +label:before {
+      left: -10px;
+      top: -11px;
+      width: 10px; height: 22px;
+      border-top: none;
+      border-left: none;
+      border-right: 2px solid $_secondary;
+      border-bottom: none;
+      @include transform(rotate(90deg));
+      -webkit-backface-visibility: hidden;
+      @include transform-origin(100% 100%);
+    }
+
+    // Disabled indeterminate
+    &amp;:disabled + label:before {
+      border-right: 2px solid $_disabled;
+      background-color: transparent;
+    }
+  }
+
+
+  // Filled Style
+  [type=&quot;checkbox&quot;].filled {
+    + label:after {
+      border-radius: 2px;
+    }
+    + label:before,
+    + label:after {
+      content: &#39;&#39;;
+      left: 0;
+      position: absolute;
+      -webkit-transition:border .25s, background-color .25s, width .20s .1s, height .20s .1s, top .20s .1s, left .20s .1s;
+      transition: border .25s, background-color .25s, width .20s .1s, height .20s .1s, top .20s .1s, left .20s .1s;
+      z-index: 1;
+    }
+    // Unchecked style
+    &amp;:not(:checked) + label:before {
+      width: 0;
+      height: 0;
+      border: 3px solid transparent;
+      left: 6px;
+      top: 10px;
+
+      -webkit-transform: rotateZ(37deg);
+      transform: rotateZ(37deg);
+      -webkit-transform-origin: 20% 40%;
+      transform-origin: 100% 100%;
+    }
+    &amp;:not(:checked) + label:after {
+      height: 20px;
+      width: 20px;
+      background-color: transparent;
+      border: 2px solid $_label;
+      top: 0;
+      z-index: 0;
+    }
+    // Checked style
+    &amp;:checked {
+      + label:before {
+        top: 0;
+        left: 1px;
+        width: 8px;
+        height: 13px;
+        border-top: 2px solid transparent;
+        border-left: 2px solid transparent;
+        border-right: 2px solid $_secondary-text;
+        border-bottom: 2px solid $_secondary-text;
+        -webkit-transform: rotateZ(37deg);
+        transform: rotateZ(37deg);
+
+        -webkit-transform-origin: 100% 100%;
+        transform-origin: 100% 100%;
+      }
+      + label:after {
+        top: 0;
+        width: 20px;
+        height: 20px;
+        border: 2px solid $_secondary;
+        background-color: $_secondary;
+        z-index: 0;
+      }
+    }
+    // Disabled style
+    &amp;:disabled:not(:checked) + label:before {
+
+      background-color: transparent;
+      border: 2px solid transparent;
+    }
+    &amp;:disabled:not(:checked) + label:after {
+      border-color: transparent;
+      background-color: $_disabled;
+    }
+    &amp;:disabled:checked + label:before {
+      background-color: transparent;
+
+    }
+    &amp;:disabled:checked + label:after {
+      background-color: $_disabled;
+      border-color: $_disabled;
+    }
+
+  }
+
+ }" data-collapsed="@mixin _md-checkbox($map) { ... }"><code>@mixin _md-checkbox($map) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>_md-checkbox</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-checkbox"><code>md-checkbox</code></a></li></ul></section><section class="main__item container item" id="mixin-_md-range"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_md-range">_md-range</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _md-range($map) { 
+  $_label:map-get-default($map,label,map-get($Palette,label));
+  $_label-accent:map-get-default($map,label-accent,map-get($Palette,label-accent));
+  $_primary:map-get-default($map,primary,map-get($Palette,primary));
+  $_text:map-get-default($map,text,map-get($Palette,label-dark-light));
+  $_secondary:map-get-default($map,secondary,map-get($Palette,primary-3));
+  $_secondary-text:map-get-default($map,secondary,map-get($Palette,primary-3-text));
+  $_placeholder:map-get-default($map,placeholder,map-get($Palette,placeholder));
+  $_disabled:map-get-default($map,disabled,map-get($Palette,hint));
+  $_width:map-get-default($map,width,100%);
+
+  md-range {
+    position: relative;
+    @content;
+  }
+  .value{
+    width:calc(#{$_width} + 50px);
+    position:absolute;
+    right:0;
+    top:1px;
+    left:0;
+    @include phone-content(){
+      width:calc(#{$_width} + 40px);
+    }
+    .range-display{
+      right:0;
+      width:40px;
+      position:absolute;
+      @include phone-content(){
+        width:35px;
+      }
+    }
+    .range-value-container{
+      @include flexbox($justification:center);
+    }
+    .range-value{
+      font-size:1em;
+      color:$_text;
+      @include phone-content(){
+        font-size:.9em;
+      }
+    }
+    .range-value-border{
+      height:1px;
+      background:$_label;
+      margin-top:3px;
+    }
+  }
+
+  .progress{
+    position:absolute;
+    height:2px;
+    background-color: $_secondary;
+    left:0;
+    top:14px;
+    right:0;
+    -webkit-transform-origin: left center;
+    transform-origin: left center;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    width:99%;
+  }
+
+  input[type=range], input[type=range] + .thumb {
+    @extend .no-select;
+    cursor: pointer;
+  }
+
+  input[type=range] {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width:calc(#{$_width} - 50px);
+    margin: 15px 0;
+    padding: 0;
+    @include phone-content(){
+      width:calc(#{$_width} - 40px);
+    }
+  }
+  .thumb {
+    position: absolute;
+    border: none;
+    height: 0;
+    width: 0;
+    border-radius: 50%;
+    background-color: $_secondary;
+    top: 0;
+    margin-left: -6px;
+    &amp;.active {
+
+    }
+  }
+
+  input[type=range]:focus {
+    outline: none;
+  }
+
+  // WebKit
+  input[type=range]{
+    -webkit-appearance: none;
+  }
+
+  input[type=range]::-webkit-slider-runnable-track {
+    height: 2px;
+    background: $_label-accent;
+    border: none;
+  }
+
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background-color: $_secondary;
+    -webkit-transform-origin: left center;
+    transform-origin: left center;
+    margin: -5px 0 0 0;
+    @include transition(.3s);
+  }
+
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: $_label-accent;
+  }
+
+  // FireFox
+  input[type=range]{
+    /* fix for FF unable to apply focus style bug  */
+    border: 1px solid white;
+
+    /*required for proper track sizing in FF*/
+  }
+
+  input[type=range]::-moz-range-track {
+    height: 2px;
+    background: $_label-accent;
+    border: none;
+  }
+
+  input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background: $_secondary;
+    margin-top: -5px;
+  }
+
+  input[type=range]:focus::-moz-range-track {
+    background: $_label-accent;
+  }
+
+  // IE 10+
+  input[type=range]::-ms-track {
+    height: 2px;
+
+    /*remove bg colour from the track, we&#39;ll use ms-fill-lower and ms-fill-upper instead */
+    background: transparent;
+
+    /*leave room for the larger thumb to overflow with a transparent border */
+    border-color: transparent;
+    border-width: 6px 0;
+
+    /*remove default tick marks*/
+    color: transparent;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: $_label-accent;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: $_label-accent;
+  }
+  input[type=range]::-ms-thumb {
+    border: none;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background: $_secondary;
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: $_label-accent;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: $_label-accent;
+  }
+
+ }" data-collapsed="@mixin _md-range($map) { ... }"><code>@mixin _md-range($map) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>_md-range</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive).<h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-range"><code>md-range</code></a></li></ul></p></section><section class="main__item container item" id="mixin-_md-switch"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_md-switch">_md-switch</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _md-switch($map) { 
+  $_label:map-get-default($map,label,map-get($Palette,label));
+  $_primary:map-get-default($map,primary,map-get($Palette,primary));
+  $_secondary:map-get-default($map,secondary,map-get($Palette,primary-3));
+  $_placeholder:map-get-default($map,placeholder,map-get($Palette,placeholder));
+  $_disabled:map-get-default($map,disabled,map-get($Palette,hint));
+
+  $_switch-checked-lever-bg: desaturate(lighten($_secondary, 25%), 25%);
+  $_switch-unchecked-bg: map-get-default($map,switch,map-get($Palette,switch));
+  $_switch-unchecked-lever-bg: map-get-default($map,switch-track,map-get($Palette,switch-track));
+
+  md-switch,
+  md-switch * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+  }
+  md-switch label {
+    cursor: pointer;
+  }
+  md-switch label input[type=checkbox]{
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  md-switch label input[type=checkbox]:checked + .lever {
+    background-color: $_switch-checked-lever-bg;
+  }
+  md-switch label input[type=checkbox]:checked + .lever:after {
+    background-color: $_secondary;
+  }
+  md-switch label .lever {
+    content: &quot;&quot;;
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 15px;
+    background-color: $_switch-unchecked-lever-bg;
+    border-radius: 15px;
+    margin-right: 10px;
+    -webkit-transition:background 0.3s ease;
+    transition: background 0.3s ease;
+    vertical-align: middle;
+    margin: 0 16px;
+  }
+  md-switch label .lever:after {
+    content: &quot;&quot;;
+    position: absolute;
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    background-color: $_switch-unchecked-bg;
+    border-radius: 21px;
+    box-shadow: 0 1px 3px 1px rgba(0,0,0,.4);
+    left: -5px;
+    top: -3px;
+    transition: left 0.3s ease, background .3s ease, box-shadow 0.1s ease;
+  }
+  // Switch active style
+  input[type=checkbox]:checked:not(:disabled) ~ .lever:active:after {
+    box-shadow: 0 1px 3px 1px rgba(0,0,0,.4), 0 0 0 15px transparentize($_secondary, .9);
+  }
+  input[type=checkbox]:not(:disabled) ~ .lever:active:after {
+    box-shadow: 0 1px 3px 1px rgba(0,0,0,.4), 0 0 0 15px rgba(0, 0, 0, .08);
+  }
+  md-switch label input[type=checkbox]:checked + .lever:after {
+    left: 24px;
+  }
+
+  // Disabled Styles
+
+  md-switch input[type=checkbox][disabled] + .lever{
+    cursor: default;
+  }
+  md-switch label input[type=checkbox][disabled] + .lever:after,
+  md-switch label input[type=checkbox][disabled]:checked + .lever:after {
+  }
+  md-switch[disabled]{
+    background:none !important;
+    cursor:default;
+    opacity:.5;
+  }
+  md-switch input[type=checkbox][disabled]{
+    background:none !important;
+  }
+
+
+ }" data-collapsed="@mixin _md-switch($map) { ... }"><code>@mixin _md-switch($map) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>_md-switch</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-switch"><code>md-switch</code></a></li></ul></section><section class="main__item container item" id="mixin-_md-file"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_md-file">_md-file</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _md-file() { 
+  $_width:map-get-default($map,width,100%);
+
+  md-file {
+    position: relative;
+
+    input.file-path {
+      margin-left: 100px;
+      width: calc(100% - 100px);
+    }
+
+    .button {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 3rem;
+      line-height: 3rem;
+    }
+
+    span {
+      cursor: pointer;
+    }
+
+    input[type=file] {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      width: $_width;
+      margin: 0;
+      padding: 0;
+      font-size: 20px;
+      cursor: pointer;
+      opacity: 0;
+      filter: alpha(opacity=0);
+    }
+
+  }
+
+ }" data-collapsed="@mixin _md-file() { ... }"><code>@mixin _md-file() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>_md-file</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-file"><code>md-file</code></a></li></ul></section><section class="main__item container item" id="mixin-_md-input"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_md-input">_md-input</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _md-input($map) { 
+
+  $_label:map-get-default($map,label,map-get($Palette,label));
+  $_primary:map-get-default($map,primary,map-get($Palette,primary));
+  $_secondary:map-get-default($map,secondary,map-get($Palette,primary-3));
+  $_placeholder:map-get-default($map,placeholder,map-get($Palette,placeholder));
+  $_disabled:map-get-default($map,disabled,map-get($Palette,hint));
+  $_height:map-get-default($map,height,2.75em);
+  $_width:map-get-default($map,width,100%);
+  $_color:map-get-default($map,color,inherit);
+
+  @include input(){
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $_label;
+    border-radius: 0;
+    outline: none;
+    height: $_height;
+    width: $_width;
+    font-size: 1em;
+    margin: 0 0 15px 0;
+    padding: 0;
+    box-shadow: none;
+    box-sizing:content-box;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    color:$_color;
+    @include md-component-placeholder($_placeholder);
+
+    &amp;[disabled]{
+      opacity:.5;
+      background:none !important;
+    }
+
+    &amp;:focus:not([readonly]) {
+      border-bottom: 1px solid $_primary;
+      box-shadow: 0 1px 0 0 $_primary;
+    }
+
+    &amp;:focus:not([readonly])+label {
+      color: $_primary;
+    }
+
+    &amp; + label:after {
+      display: block;
+      content: &quot;&quot;;
+      position: absolute;
+      top: 4em;
+      opacity: 0;
+      -webkit-transition: .2s opacity ease-out, .2s color ease-out;
+      transition: .2s opacity ease-out, .2s color ease-out;
+    }
+
+  }
+
+  label {
+    font-size: .8em;
+    color: $_label;
+  }
+
+  textarea {
+    width: $_width;
+    height: 3em;
+    background-color: transparent;
+  }
+
+  md-input,md-textarea {
+    position: relative;
+    margin-top: 1em;
+    display:block;
+    span{
+      &amp;.icon-{
+        display:none;
+      }
+    }
+
+    label {
+      color: $_label;
+      position: absolute;
+      top: 0.65em;
+      left: 0;
+      font-size: 1em;
+      cursor: text;
+      -webkit-transiton:.2s ease-out;
+      transition:.2s ease-out;
+    }
+
+    label.active {
+      font-size: .8em;
+      @include transform(translateY(-90%));
+    }
+
+    &amp;[disabled]{
+      opacity:.5;
+      background:none !important;
+    }
+
+    // Prefix Icons
+    .prefix {
+      display:inherit;
+      position: absolute;
+      width: 2em;
+      font-size: 24px;
+      @include transition(color .2s);
+      color:$_placeholder;
+      top:10px;
+      &amp;.active { color: $_primary; }
+    }
+    .prefix ~ input,
+    .prefix ~ textarea {
+      margin-left: 2em;
+      width: calc(#{$_width} - 2em);
+    }
+    .prefix ~ textarea { padding-top: .8em; }
+    .prefix ~ label { margin-left: 2.5em; }
+
+    &amp;[readonly]{
+      color:$_placeholder;
+    }
+
+    @content;
+
+  }
+  md-textarea {
+    margin-top: 1.25em;
+    label {
+      &amp;.active{
+        @include transform(translateY(-130%));
+      }
+    }
+  }
+
+ }" data-collapsed="@mixin _md-input($map) { ... }"><code>@mixin _md-input($map) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>_md-input</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive).<h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-input"><code>md-input</code></a></li></ul></p></section><section class="main__item container item" id="mixin-_md-select"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_md-select">_md-select</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _md-select($map) { 
+  $_label:map-get-default($map,label,map-get($Palette,label));
+  $_primary:map-get-default($map,primary,map-get($Palette,primary));
+  $_secondary:map-get-default($map,secondary,map-get($Palette,primary-3));
+  $_placeholder:map-get-default($map,placeholder,map-get($Palette,placeholder));
+  $_disabled:map-get-default($map,disabled,map-get($Palette,hint));
+  $_text:map-get-default($map,text,map-get($Palette,label-dark-light));
+  $_height:map-get-default($map,height,2.75em);
+  $_width:map-get-default($map,width,100%);
+  $_color:map-get-default($map,color,inherit);
+
+  md-select,[md-select] {
+    position: relative;
+    margin-top:2em;
+    display:block;
+    &amp;&gt;select{
+      background:none;
+      display: block;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      height: $_height;
+      width: 100%;
+      font-size: 1em;
+      outline: none;
+      cursor:pointer;
+      color:$_color;
+      border: none;
+      border-bottom: 1px solid $_label;
+      border-radius: 0;
+      box-shadow: none;
+      padding: 0 1.5em 0 0;
+      // Focused input style
+      &amp;:focus:not([readonly]) {
+        border-bottom: 1px solid $_primary;
+        box-shadow: 0 1px 0 0 $_primary;
+      }
+      // Focused label style
+      &amp;:focus:not([readonly]) + label{
+        color: $_primary;
+      }
+    }
+    .icon-arrow-drop-down {
+      color: initial;
+      position: absolute;
+      right: 5px;
+      top: 8px;
+      font-size: 24px;
+      pointer-events: none;
+
+    }
+    label {
+      position: absolute;
+      top: -1.3em;
+      font-size: .8em;
+    }
+    .prefix {
+      display:inherit;
+      position: absolute;
+      width: 2em;
+      font-size: 24px;
+      @include transition(color .2s);
+      color:$_placeholder;
+      top:10px;
+      &amp;.active { color: $_primary; }
+    }
+    .prefix ~ select{
+      margin-left: 2em;
+      width: calc(#{$_width} - 2em);
+    }
+    .prefix ~ label { margin-left: 2.5em; }
+
+    &amp;[readonly]{
+      color:$_placeholder;
+    }
+  }
+ }" data-collapsed="@mixin _md-select($map) { ... }"><code>@mixin _md-select($map) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>_md-select</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-select"><code>md-select</code></a></li></ul></section><section class="main__item container item" id="mixin-_md-input-icon-button"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_md-input-icon-button">_md-input-icon-button</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _md-input-icon-button($map) { 
+
+  $_label:map-get-default($map,label,map-get($Palette,label));
+  $_primary:map-get-default($map,primary,map-get($Palette,primary));
+  $_secondary:map-get-default($map,secondary,map-get($Palette,primary-3));
+  $_placeholder:map-get-default($map,placeholder,map-get($Palette,placeholder));
+  $_disabled:map-get-default($map,disabled,map-get($Palette,hint));
+  $_color:map-get-default($map,color,inherit);
+
+  md-input-icon-button {
+    @include flexbox($justification:space-between,$alignment:flex-end);
+    position: relative;
+    margin-top: 1em;
+    label {
+      color: $_label;
+      position: absolute;
+      top: 0.65em;
+      left: 0;
+      font-size: 1em;
+      cursor: text;
+      -webkit-transiton:.2s ease-out;
+      transition:.2s ease-out;
+    }
+    label.active {
+      font-size: .8em;
+      @include transform(translateY(-90%));
+    }
+    input[type=text]{
+      margin:0;
+    }
+    button{
+      background:transparent;
+      border:0;
+      border-bottom:1px solid $_label;
+      color:$_label;
+      span{
+        font-size:24px;
+      }
+      -webkit-transition: 50ms ease-out;
+      transition: 50ms ease-out;
+      &amp;:hover,&amp;:focus{
+        color: $_primary;
+
+      }
+    }
+    input[type=text]{
+      -webkit-transiton:10ms ease-in;
+      transition:10ms ease-in;
+      color:$_color;
+      &amp;:focus:not([readonly]) {
+        border-bottom: 1px solid $_primary;
+        box-shadow: 0 1px 0 0 $_primary;
+      }
+      &amp;:focus:not([readonly])+label+button {
+        color: $_primary;
+        border-bottom: 1px solid $_primary;
+        box-shadow: 0 1px 0 0 $_primary;
+
+      }
+    }
+    &amp;[disabled]{
+      opacity:.5;
+      background:none !important;
+    }
+
+  }
+
+
+ }" data-collapsed="@mixin _md-input-icon-button($map) { ... }"><code>@mixin _md-input-icon-button($map) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>_md-input-icon-button</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-input-icon-button"><code>md-input-icon-button</code></a></li></ul></section><section class="main__item container item" id="mixin-md-radio"><h3 class="item__heading"><a class="item__name" href="#mixin-md-radio">md-radio</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin md-radio($class, $map) { 
+
+  &amp;.#{$class}{
+    @include _md-radio($map);
+    md-radio{
+      @content;
+    }
+
+  }
+
+ }" data-collapsed="@mixin md-radio($class, $map) { ... }"><code>@mixin md-radio($class, $map) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>md-radio</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$class</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive).<h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_md-radio"><code>_md-radio</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-forms"><code>md-forms</code></a></li></ul></p></section><section class="main__item container item" id="mixin-md-checkbox"><h3 class="item__heading"><a class="item__name" href="#mixin-md-checkbox">md-checkbox</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin md-checkbox($class, $map) { 
+
+  &amp;.#{$class}{
+    @include _md-checkbox($map);
+    md-checkbox{
+      @content;
+    }
+  }
+
+ }" data-collapsed="@mixin md-checkbox($class, $map) { ... }"><code>@mixin md-checkbox($class, $map) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>md-checkbox</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$class</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive).<h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_md-checkbox"><code>_md-checkbox</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-forms"><code>md-forms</code></a></li></ul></p></section><section class="main__item container item" id="mixin-md-range"><h3 class="item__heading"><a class="item__name" href="#mixin-md-range">md-range</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin md-range($class, $map) { 
+
+  @-moz-document url-prefix() {
+    &amp;.#{$class}{
+      md-range{
+        .progress{
+          top:-12px !important;
+        }
+        .thumb {
+          top: -25px !important;
+        }
+        .value{
+          top:-23px;
+        }
+      }
+    }
+  }
+
+  &amp;.#{$class}{
+    @include _md-range($map);
+    md-range{
+      @content;
+    }
+  }
+
+ }" data-collapsed="@mixin md-range($class, $map) { ... }"><code>@mixin md-range($class, $map) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>md-range</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$class</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive).<h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_md-range"><code>_md-range</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-forms"><code>md-forms</code></a></li></ul></p></section><section class="main__item container item" id="mixin-md-switch"><h3 class="item__heading"><a class="item__name" href="#mixin-md-switch">md-switch</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin md-switch($class, $map) { 
+
+  &amp;.#{$class}{
+    @include _md-switch($map);
+    md-switch{
+      @content;
+    }
+  }
+
+ }" data-collapsed="@mixin md-switch($class, $map) { ... }"><code>@mixin md-switch($class, $map) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>md-switch</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$class</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive).<h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_md-switch"><code>_md-switch</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-forms"><code>md-forms</code></a></li></ul></p></section><section class="main__item container item" id="mixin-md-select"><h3 class="item__heading"><a class="item__name" href="#mixin-md-select">md-select</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin md-select($class, $map) { 
+
+  &amp;.#{$class}{
+    @include _md-select($map);
+    md-select{
+      @content;
+    }
+  }
+
+ }" data-collapsed="@mixin md-select($class, $map) { ... }"><code>@mixin md-select($class, $map) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>md-select</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$class</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive).<h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_md-select"><code>_md-select</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-forms"><code>md-forms</code></a></li></ul></p></section><section class="main__item container item" id="mixin-md-file"><h3 class="item__heading"><a class="item__name" href="#mixin-md-file">md-file</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin md-file($class) { 
+
+  &amp;.#{$class}{
+    @include _md-file($map);
+    md-file{
+      @content;
+    }
+  }
+
+ }" data-collapsed="@mixin md-file($class) { ... }"><code>@mixin md-file($class) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>md-file</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$class</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive).<h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_md-file"><code>_md-file</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-forms"><code>md-forms</code></a></li></ul></p></section><section class="main__item container item" id="mixin-md-input"><h3 class="item__heading"><a class="item__name" href="#mixin-md-input">md-input</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin md-input($class, $map) { 
+
+  &amp;.#{$class}{
+    @include _md-input($map);
+    md-input,md-textarea{
+      @content;
+    }
+  }
+
+ }" data-collapsed="@mixin md-input($class, $map) { ... }"><code>@mixin md-input($class, $map) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>md-input</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$class</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive).<h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_md-input"><code>_md-input</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-forms"><code>md-forms</code></a></li></ul></p></section><section class="main__item container item" id="mixin-md-input-icon-button"><h3 class="item__heading"><a class="item__name" href="#mixin-md-input-icon-button">md-input-icon-button</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin md-input-icon-button($class, $map) { 
+
+  &amp;.#{$class}{
+    @include _md-input-icon-button($map);
+    md-input-icon-button{
+      @content;
+    }
+  }
+
+ }" data-collapsed="@mixin md-input-icon-button($class, $map) { ... }"><code>@mixin md-input-icon-button($class, $map) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>md-input-icon-button</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$class</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive).<h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_md-input-icon-button"><code>_md-input-icon-button</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-forms"><code>md-forms</code></a></li></ul></p></section><section class="main__item container item" id="mixin-md-forms"><h3 class="item__heading"><a class="item__name" href="#mixin-md-forms">md-forms</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin md-forms($class, $map) { 
+
+  button:focus {
+    outline: none;
+  }
+
+  *[disabled]{
+    opacity:.5;
+  }
+
+  @include md-input($class,$map);
+  @include md-radio($class,$map);
+  @include md-checkbox($class,$map);
+  @include md-range($class,$map);
+  @include md-switch($class,$map);
+  @include md-select($class,$map);
+  @include md-file($class);
+  @include md-input-icon-button($class,$map);
+
+  @content;
+ }" data-collapsed="@mixin md-forms($class, $map) { ... }"><code>@mixin md-forms($class, $map) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>md-forms</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$class</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>String</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$map</code></th><td data-label="desc">&mdash;<span class="visually-hidden">none</span></td><td data-label="type"><code>Map</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr></tbody></table><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive).<h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-input"><code>md-input</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-radio"><code>md-radio</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-checkbox"><code>md-checkbox</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-range"><code>md-range</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-switch"><code>md-switch</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-select"><code>md-select</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-file"><code>md-file</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-input-icon-button"><code>md-input-icon-button</code></a></li></ul></p></section><section class="main__item container item" id="mixin-_md-semantic-state"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_md-semantic-state">_md-semantic-state</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _md-semantic-state() { 
+  color:map-nested-get($Semantic,$state,font-color) !important;
+  border-color:map-nested-get($Semantic,$state,font-color) !important;
+  &amp;:before{
+    color:map-nested-get($Semantic,$state,font-color) !important;
+  }
+  &amp;:after{
+    color:map-nested-get($Semantic,$state,font-color) !important;
+  }
+  &amp;:hover,&amp;:focus,&amp;:focus:not(readonly),&amp;.active{
+    color:map-nested-get($Semantic,$state,font-color) !important;
+    border-color:map-nested-get($Semantic,$state,font-color) !important;
+    @include component-placeholder(rgba(map-nested-get($Semantic,$state,font-color),0.7));
+  }
+  @include component-placeholder(rgba(map-nested-get($Semantic,$state,font-color),0.7));
+ }" data-collapsed="@mixin _md-semantic-state() { ... }"><code>@mixin _md-semantic-state() { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-_md-semantic-component"><code>_md-semantic-component</code></a></li></ul></section><section class="main__item container item" id="mixin-_md-semantic-component"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_md-semantic-component">_md-semantic-component</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _md-semantic-component() { 
+  *{
+    &amp;.#{$state}{
+      @include _md-semantic-state($state);
+      &amp;:hover{
+        @include _md-semantic-state($state);
+      }
+      &amp;:active,&amp;.active{
+        @include _md-semantic-state($state);
+      }
+      @include _md-semantic-input($state);
+
+      *{
+        @include _md-semantic-state($state);
+      }
+    }
+  }
+ }" data-collapsed="@mixin _md-semantic-component() { ... }"><code>@mixin _md-semantic-component() { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_md-semantic-state"><code>_md-semantic-state</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-semantic-components"><code>md-semantic-components</code></a></li></ul></section><section class="main__item container item" id="mixin-md-semantic-components"><h3 class="item__heading"><a class="item__name" href="#mixin-md-semantic-components">md-semantic-components</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin md-semantic-components() { 
+  @include _md-semantic-component(error);
+  @include _md-semantic-component(info);
+  @include _md-semantic-component(warning);
+  @include _md-semantic-component(success);
+ }" data-collapsed="@mixin md-semantic-components() { ... }"><code>@mixin md-semantic-components() { ... }</code></pre></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#mixin-_md-semantic-component"><code>_md-semantic-component</code></a></li></ul></section></section></section><footer class="footer" role="contentinfo"><div class="container"><div class="footer__project-info project-info"><!-- Name and URL --><span class="project-info__name">Sass-md-components</span><!-- Version --> <span class="project-info__version">- v1.0.0</span><!-- License --> <span class="project-info__license">, under MIT</span></div><a class="footer__watermark" href="http://sassdoc.com"><img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo"></a></div></footer></article><script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script><script src="assets/js/main.min.js"></script></body></html>

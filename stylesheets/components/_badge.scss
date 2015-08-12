@@ -1,0 +1,40 @@
+
+
+/// @access private
+/// @param {Map} $map
+@mixin _md-badge($map){
+  $_size:map-get-default($map,size,1.5em);
+  $_font-size:map-get-default($map,font-size,12px);
+  border-radius:50%;
+  height: $_size;
+  width: $_size;
+  @include flexbox($justification:center,$alignment:center);
+  font-size: $_font-size;
+};
+
+/// @access public
+/// @require {Mixin} _md-badge - private mixin
+/// @require {Mixin} md-element - element tag mixin
+/// @param {String} $class - class scope
+/// @param {Map} $map
+/// @prop {String} size (1.5em) - height/width size
+/// @prop {String} font-size (12px) - font-size
+/// @content css
+/// @example
+///   md-badge(){@extend .md.indigo; }
+@mixin md-badge($class:null,$map:()){
+
+  md-badge,.md-badge{
+    @if $class != null{
+      &.#{$class} {
+        @include _md-badge($map);
+        @content;
+      }
+    }@else{
+      @include _md-badge($map);
+      @content;
+    }
+  }
+
+};
+

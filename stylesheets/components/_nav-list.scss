@@ -1,0 +1,29 @@
+
+
+
+/// @access public
+/// @param {Map} $map
+/// @prop {String} padding (.5em .5em .5em 0) - padding
+/// @content css
+/// @example
+///   nav-list()
+@mixin nav-list($map:()){
+  $_padding:map-get-default($map,padding,.5em .5em .5em 0);
+
+  nav-list{
+    @include flexbox-column();
+    &>menu-item{
+      @include flexbox($alignment:center);
+      &.space-between{
+        @include justify-content(space-between);
+      }
+      &.space-around{
+        @include justify-content(space-around);
+      }
+      padding:$_padding;
+      position:relative;
+    }
+    @content;
+  }
+
+}

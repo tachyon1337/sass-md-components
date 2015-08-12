@@ -1,0 +1,64 @@
+
+/// @access private
+/// @param {Map} $map
+@mixin _md-layout($map){
+
+  $_side-panel-width:map-nested-get-default($map,side-panel,width,225px);
+  $_side-panel-background:map-nested-get-default($map,side-panel,background,#f6f6f6);
+  $_side-panel-padding:map-nested-get-default($map,side-panel,padding,1em 0 0 1em);
+  $_main-panel-background:map-nested-get-default($map,main-panel,background,#fff);
+
+  @include flexbox();
+  max-height:100%;
+  height:100%;
+  width:100%;
+  overflow:hidden;
+  &>side-panel{
+    min-width:$_side-panel-width;
+    background:$_side-panel-background;
+    height:100%;
+    position:relative;
+    @include flexbox-column();
+    padding:$_side-panel-padding;
+  }
+  &>main-panel{
+    position:relative;
+    display:block;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    height:100%;
+    @include flex-grow(4);
+    -webkit-overflow-scrolling: touch;
+    background:$_main-panel-background;
+    padding-bottom:2em;
+    &[scroll]{
+      padding-bottom:20em;
+    }
+  }
+
+
+}
+
+
+
+/// @access public
+/// @require {Mixin} _md-layout - private mixin
+/// @param {String} $class - class scope
+/// @param {Map} $map
+/// @prop {Map} side-panel
+/// @prop {String} side-panel.width (225px) - side panel width
+/// @prop {String} side-panel.background (#f6f6f6) - side panel background
+/// @prop {String} side-panel.padding (1em 0 0 1em) - side panel padding
+/// @prop {Map} main-panel
+/// @prop {String} main-panel.background (#fff) - main panel background
+/// @content css
+/// @example
+///   md-bar()
+
+@mixin md-layout($tags:null,$class:null,$map:()){
+  $tag:md-layout;
+  @include element-tag($tag,$tags,$class){
+    @include _md-layout($map);
+    @content;
+  }
+};

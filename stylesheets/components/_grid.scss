@@ -1,0 +1,129 @@
+
+/// @access public
+/// @param {String} $class
+/// @param {Map} $map
+/// @prop {String} columns (4) - columns
+/// @prop {Map} header - header map
+/// @prop {String} header.font-family('robotomedium') - header font family
+/// @prop {String} header.border-bottom(1px solid #999) - header border bottom
+/// @prop {String} header.icon-color(#d8d8d8) - header icon-color
+/// @prop {String} header.active-color(#7986CB) - header active-color
+/// @prop {Map} section - section map
+/// @prop {String} section.color(lighten #666,10%) - section color
+/// @prop {Map} pagination - pagination map
+/// @prop {String} pagination.background(#fff) - pagination icon background color
+/// @prop {String} pagination.color(#666) - pagination icon color
+/// @prop {String} pagination.background-active(#BA68C8) - pagination background active color
+/// @prop {String} pagination.color-active(#fff) - pagination active color
+/// @prop {String} pagination.refresh(#bbb) - pagination refresh icon color
+/// @content css
+/// @example
+///   md-grid($map:(columns:7))
+
+@mixin md-grid($class:null,$map:(),$columns:()){
+  $_color:lighten(#666,10%);
+  $_pagination-bg:map-deep-get($MD-Color,purple,primary,300,value);
+  $_grid-color:map-deep-get($MD-Color,indigo,primary,300,value);
+
+  $_columns:map-get-default($map,columns,4);
+  $_header-font-family:map-nested-get-default($map,header,font-family,'robotomedium');
+  $_header-border-bottom:map-nested-get-default($map,header,border-bottom,1px solid #999);
+  $_header-icon-color:map-nested-get-default($map,header,icon-color,#d8d8d8);
+  $_header-active-color:map-nested-get-default($map,header,active,$_grid-color);
+
+  $_section-color:map-nested-get-default($map,section,color,$_color);
+
+  $_pagination-background:map-nested-get-default($map,pagination,background,#fff);
+  $_pagination-color:map-nested-get-default($map,pagination,color,#666);
+  $_pagination-background-active:map-nested-get-default($map,pagination,background-active,$_pagination-bg);
+  $_pagination-color-active:map-nested-get-default($map,pagination,color-active,#fff);
+  $_pagination-refresh:map-nested-get-default($map,pagination,refresh,#bbb);
+
+  @include flex-grid($class:$class,$tags:(md-grid),$map:(cell:(show-borders:false,alt-type:odd),touch:(header-font:'robotomedium')),$columns:$columns){
+    border:0;
+    &>header{
+      border-bottom:0;
+      &>*{
+        font-family:$_header-font-family;
+        border-left:0 !important;
+        border-right:0;
+        border-bottom:$_header-border-bottom !important;
+        font-size:1em;
+        @include span-icon{
+          margin-left:.25em;
+          color:$_header-icon-color;
+        }
+        &.active{
+          color:$_header-active-color;
+          @include span-icon(){
+            color:$_header-active-color;
+          }
+          border-bottom:3px solid $_header-active-color !important;
+          padding-bottom:2px;
+        }
+      }
+    }
+    &>section{
+      color:$_section-color;
+    }
+
+    @content;
+  };
+
+  @include grid-pagination(){
+    > page-navigation a.control {
+      border:0 !important;
+      box-shadow: map-get($MD-Depth,'05') !important;
+      @include span-icon(){
+        font-size:18px;
+      }
+      &:hover{
+        background:$-pagination-background;
+        color:$_pagination-color !important;
+        &>span{
+          color:$_pagination-color !important;
+        }
+      }
+    }
+    > page-navigation a.page.active {
+      border:0 !important;
+      box-shadow: map-get($MD-Depth,'05') !important;
+      background:$_pagination-background-active !important;
+      &:hover{
+        border:0 !important;
+        color:$_pagination-color-active !important;
+        &>span{
+          color:$_pagination-color-active !important
+        }
+      }
+    }
+    > page-navigation a.page {
+      border:0 !important;
+      border-radius:50%;
+      &>span{
+        border-radius:50%;
+      }
+      &:hover{
+        border:0 !important;
+        background:$_pagination-background;
+        color:$_pagination-color !important;
+        &>span{
+          color:$_pagination-color !important;
+        }
+      }
+    }
+    [refresh]{
+      margin-right:2em;
+      border-radius:50%;
+      &:hover{
+        color:$_pagination-refresh !important;
+      }
+    }
+    page-info{
+      &>div{
+        font-size:14px !important;
+      }
+    }
+  };
+
+}

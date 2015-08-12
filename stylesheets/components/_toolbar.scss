@@ -1,0 +1,68 @@
+
+/// disable polymer paper-header box-shadow
+/// @access private
+@mixin _paper-header-md-toolbar(){
+  paper-header-panel.paper-header-panel-0 .paper-header:after {
+    box-shadow:none !important;
+
+  }
+}
+
+/// @access private
+/// @param {Map} $map
+@mixin _md-toolbar($map){
+  $_height:map-get-default($map,height,56px);
+  $_padding:map-get-default($map,padding,0 6em 0 1em);
+  $_position:map-get($map,position);
+  $_top:map-get($map,top);
+  $_bottom:map-get($map,bottom);
+  $_z-index:map-get-default($map,z-index,10);
+  $_box-shadow:map-get-default($map,box-shadow,0 2px 5px rgba(0,0,0,0.26));
+
+  height:$_height;
+  padding:$_padding;
+  @include flexbox($justification:space-between,$alignment:center);
+
+  @if $_position !=null{
+    position:$_position;
+    left:0;
+
+  }
+  @if $_top !=null{
+    top:$_top;
+  }
+  @if $_bottom !=null{
+    top:$_bottom;
+  }
+  z-index:$_z-index;
+  box-shadow:$_box-shadow;
+
+  @include touch-content(){
+    padding-right:1em;
+  }
+
+
+};
+
+/// @access public
+/// @require {Mixin} _md-toolbar - private mixin
+/// @require {Mixin} md-element - element tag mixin
+/// @param {String} $class - class scope
+/// @param {Map} $map
+/// @prop {String} height (56px) - component height, should equal toolbar height
+/// @prop {String} padding (0 6em 0 1em) - component padding
+/// @prop {String} position  - <optional> position
+/// @prop {String} top  - <optional> top
+/// @prop {String} bottom  - <optional> bottom
+/// @prop {String} z-index  - <optional> z-index
+/// @content css
+/// @example
+///   md-toolbar(){ @extend .md.blue; }
+@mixin md-toolbar($class:null,$map:()){
+  $tag:md-toolbar;
+  @include element-tag($tag:$tag,$class:$class){
+    @include _md-toolbar($map);
+    @content;
+  }
+  @include _paper-header-md-toolbar();
+};

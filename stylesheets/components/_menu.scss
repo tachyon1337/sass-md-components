@@ -1,0 +1,190 @@
+@import "../theme";
+
+/// @access private
+@mixin _menu-dropdown(){
+  display: list-item;
+  list-style: none;
+  box-shadow:none;
+  &>menu-item{
+    display: list-item;
+    width:100%;
+  }
+  @include transition(all 350ms);
+};
+
+/// @access private
+/// @param {Map} $map
+@mixin _md-menu($component,$header-component,$map){
+  $_expand-icon:map-get($MD-Icons,add);
+  $_min-icon:map-get($MD-Icons,remove);
+  $_next-icon:map-get($MD-Icons,navigate-next);
+
+  $_icon-font:'material';
+  $_padding:map-get-default($map,padding,0);
+  $_margin:map-get-default($map,margin,1em 0 0 0);
+  $_transition:map-nested-get-default($map,item,header-transition,all 350ms);
+  $_icon-margin:map-nested-get-default($map,item,header-icon-margin,0 .25em 0 0);
+  $_header-padding:map-nested-get-default($map,item,header-padding,.5em 0 .5em 1em);
+  $_item-dropdown-padding:map-nested-get-default($map,item,dropdown-padding,0 0 0 1.5em);
+  $_item-dropdown-item-padding:map-nested-get-default($map,item,dropdown-item-padding,.5em .5em .5em 1.5em);
+  $_header-expand-icon:map-nested-get-default($map,icon,expand,$_expand-icon);
+  $_header-minimize-icon:map-nested-get-default($map,icon,minimize,$_min-icon);
+  $_icon-right:map-nested-get-default($map,icon,next,$_next-icon);
+
+  background:inherit;
+  margin: $_margin;
+  padding:$_padding;
+  height: 100%;
+  display:block;
+  width:100%;
+
+  &>menu-item{
+    position:relative;
+    background:none;
+
+    &>header{
+      padding:$_header-padding;
+      width:100%;
+      position:relative;
+      @include transition($_transition);
+      @extend %#{$header-component}-font !optional;
+      &>span{
+        margin:$_icon-margin;
+        @extend %#{$header-component}-icon !optional;
+      }
+      &>a{
+        @extend %#{$header-component}-font !optional;
+      }
+      &:hover{
+        cursor:pointer;
+        @extend %#{$header-component}-background-hover !optional;
+        @extend %#{$header-component}-font-hover !optional;
+        &>a{
+          @extend %#{$header-component}-font-hover !optional;
+        }
+        &>span{
+          @extend %#{$header-component}-icon-hover !optional;
+        }
+        &.dropdown{
+          &:after{
+            @extend %#{$header-component}-icon-hover !optional;
+          }
+        }
+      }
+      &.active{
+        @extend %#{$header-component}-background-active !optional;
+        @extend %#{$header-component}-font-active !optional;
+        &>a{
+          @extend %#{$header-component}-font-active !optional;
+        }
+        &>span{
+          @extend %#{$header-component}-icon-active !optional;
+        }
+      }
+      &.dropdown{
+        &:after{
+          font-family:$_icon-font;
+          position:absolute;
+          content:$_header-expand-icon;
+          right:.5em;
+          top:.75em;
+          @extend %#{$header-component}-icon !optional;
+        }
+      }
+    }
+
+    &>menu-dropdown{
+      position:relative;
+      padding:$_item-dropdown-padding;
+      background:inherit;
+      @include _menu-dropdown();
+    }
+
+    &.expand{
+      @extend %#{$component}-background !optional;
+      &>header{
+        @extend %#{$header-component}-background-hover !optional;
+        @extend %#{$header-component}-font-hover !optional;
+      }
+      &>menu-dropdown{
+        padding:$_item-dropdown-padding;
+        &>menu-item{
+          font-size:.9em;
+          padding: $_item-dropdown-item-padding;
+          &>a{
+            font-size:.9em;
+            position:relative;
+            @extend %#{$component}-font !optional;
+
+            &:hover{
+              @extend %#{$component}-font-hover !optional;
+            }
+            &.active{
+              @extend %#{$component}-font-active !optional;
+            }
+            &:before{
+              position:absolute;
+              left:-20px;
+              font-family:$_icon-font;
+              content:$_icon-right;
+            }
+          }
+        }
+      }
+      .dropdown{
+        &:after{
+          content:$_header-minimize-icon;
+          @extend %#{$header-component}-icon-hover !optional;
+        }
+      }
+    }
+
+    header + menu-dropdown{
+      height: 0;
+      display:block;
+      overflow: hidden;
+    }
+    &.expand header + menu-dropdown{
+      height:auto;
+      overflow: hidden;
+    }
+    &:last-child{
+      &>menu-dropdown{
+        margin-bottom:0;
+      }
+    }
+  }
+}
+
+
+/// md-menu
+//// imports theme
+/// @access public
+/// @require {Mixin} _menu-dropdown - private mixin
+/// @require {Mixin} _md-menu - private mixin
+/// @require {Mixin} md-element - element tag mixin
+/// @param {String} $component (md-menu) - sass component placeholders
+/// @param {String} $header-component (md-menu-header) - sass component placeholders
+/// @param {String} $class - class scope
+/// @param {Map} $map
+/// @prop {String} margin (0) - component margin
+/// @prop {String} padding (0) - component padding
+/// @prop {Map} item - component item map
+/// @prop {String} item.header-transition (all 350ms) - item header transition
+/// @prop {String} item.header-padding (.5em 0 .5em 1em) - item header padding
+/// @prop {String} item.dropdown-padding (0 0 0 1.5em) - item dropdown padding
+/// @prop {String} item.dropdown-item-padding (0 0 0 1.5em) - menu-dropdown item padding
+/// @prop {Map} icon - component icon map
+/// @prop {String} icon.expand ("\e6fd") - expand icon
+/// @prop {String} icon.minimize ("\e713") - minimize icon
+/// @prop {String} icon.next ("\e844") - next icon
+/// @content css
+/// @example
+///   md-menu($map:($component:my-component,$header-component:my-header-component,$dropdown:()))
+@mixin md-menu($component:md-menu,$header-component:md-menu-header,$class:null,$map:()){
+  $tag:md-menu;
+  @include element-tag($tag:$tag,$class:$class){
+    @include _md-menu($component,$header-component,$map);
+    @content;
+  }
+}

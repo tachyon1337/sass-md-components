@@ -1,0 +1,27 @@
+{
+  "name": "sass-md-components",
+  "description": "Sass Material Design Components",
+  "version": "1.0.0",
+  "author": "S. Francis",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tachyon1337/sass-md-components.git"
+  },
+  "dependencies": {
+    "sass-functions": "git+https://github.com/tachyon1337/sass-functions.git",
+    "sass-media-query": "git+https://github.com/tachyon1337/sass-media-query.git",
+    "sass-component": "git+https://github.com/tachyon1337/sass-component.git",
+    "sass-flexbox": "git+https://github.com/tachyon1337/sass-flexbox.git",
+    "sass-semantic-components": "git+https://github.com/tachyon1337/sass-semantic-components.git",
+    "sass-element-tag": "git+https://github.com/tachyon1337/sass-element-tag.git",
+    "sass-flex-grid":"git+https://github.com/tachyon1337/sass-flex-grid.git",
+    "material-design-colors": "git+https://github.com/tachyon1337/material-design-colors.git",
+    "material-design-font": "git+https://github.com/tachyon1337/material-design-font.git",
+    "material-design-icons": "git+https://github.com/tachyon1337/material-design-icons.git"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "sassdoc": "^2.1.15"
+  }
+}

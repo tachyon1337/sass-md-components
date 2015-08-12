@@ -1,0 +1,126 @@
+
+
+
+///@private
+@mixin _md-semantic-state($state){
+  color:map-nested-get($Semantic,$state,font-color) !important;
+  border-color:map-nested-get($Semantic,$state,font-color) !important;
+  &:before{
+    color:map-nested-get($Semantic,$state,font-color) !important;
+  }
+  &:after{
+    color:map-nested-get($Semantic,$state,font-color) !important;
+  }
+  &:hover,&:focus,&:focus:not(readonly),&.active{
+    color:map-nested-get($Semantic,$state,font-color) !important;
+    border-color:map-nested-get($Semantic,$state,font-color) !important;
+    @include component-placeholder(rgba(map-nested-get($Semantic,$state,font-color),0.7));
+  }
+  @include component-placeholder(rgba(map-nested-get($Semantic,$state,font-color),0.7));
+};
+
+@mixin _md-semantic-input($state){
+  $_color:map-nested-get($Semantic,$state,font-color);
+  @include input(){
+    @include component-placeholder(rgba(map-nested-get($Semantic,$state,font-color),0.7));
+    &:focus{
+      box-shadow:0 1px 0 0 $_color  !important;
+    }
+    &:focus:not([readonly])+label+button {
+      color: $_color !important;
+      border-bottom: 1px solid $_color !important;
+      box-shadow: 0 1px 0 0 $_color !important;
+    }
+  }
+  input[type=checkbox] + label,input[type=radio] + label{
+     &:before{
+       border-color:$_color !important;
+     }
+  }
+  input[type=radio] + label{
+    &:after{
+      border-color:$_color !important;
+      background-color:$_color !important;
+    }
+  }
+
+  label span.lever{
+      background-color:$_color !important;
+  }
+
+  input[type=range]{
+    border-color: transparent !important;
+    box-shadow:none !important;
+    &.active{
+      border-color: transparent !important;
+      box-shadow:none !important;
+    }
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    background: $_color !important;
+    border-color:transparent !important;
+    box-shadow:none !important;
+  }
+  input[type=range]:focus:not[readonly]{
+    border-color:transparent !important;
+    box-shadow:none !important;
+  }
+
+  input[type=range]::-webkit-slider-thumb {
+    background-color: $_color;
+  }
+  input[type=range]::-moz-range-track {
+    background: $_color;
+  }
+  input[type=range]::-moz-range-thumb {
+    background: $_color;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: $_color;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: $_color;
+  }
+  input[type=range]::-ms-thumb {
+    background: $_color;
+  }
+  .progress,.thumb{
+    background-color:$_color !important;
+    &:focus{
+      box-shadow:none !important;
+    }
+  }
+  .range-value-border{
+    background: $_color !important;
+  }
+
+};
+
+///@private
+@mixin _md-semantic-component($state){
+  *{
+    &.#{$state}{
+      @include _md-semantic-state($state);
+      &:hover{
+        @include _md-semantic-state($state);
+      }
+      &:active,&.active{
+        @include _md-semantic-state($state);
+      }
+      @include _md-semantic-input($state);
+
+      *{
+        @include _md-semantic-state($state);
+      }
+    }
+  }
+};
+
+///@public
+@mixin md-semantic-components(){
+  @include _md-semantic-component(error);
+  @include _md-semantic-component(info);
+  @include _md-semantic-component(warning);
+  @include _md-semantic-component(success);
+}
+

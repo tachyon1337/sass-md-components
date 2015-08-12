@@ -1,0 +1,54 @@
+
+
+/// @access private
+/// @param {Map} $map
+@mixin _md-icon-badge($map){
+  $_size:map-get-default($map,size,24px);
+  $_margin:map-get-default($map,margin,0);
+  $_color:map-get-default($map,color,#fff);
+  $_top:map-nested-get-default($map,badge,top,-.2em);
+  $_left:map-nested-get-default($map,badge,left,-.7em);
+
+
+  position:relative;
+  margin:$_margin;
+  height:$_size;
+  width:$_size;
+  display:inline;
+  cursor:pointer;
+  @include span-icon(){
+    color:$_color;
+  }
+  &>md-badge,&>.md-badge{
+    position:absolute;
+    top: $_top;
+    left: $_left;
+  }
+};
+
+/// @access public
+/// @require {Mixin} _md-icon-badge - private mixin
+/// @require {Mixin} md-element - element tag mixin
+/// @param {String} $class - class scope
+/// @param {Map} $map
+/// @prop {String} size (24px) - icon size
+/// @prop {String} color (#fff) - icon color
+/// @prop {String} margin (0) - margin
+/// @content css
+/// @example
+///   md-icon-badge(){@extend .md.indigo; }
+@mixin md-icon-badge($class:null,$map:()){
+
+  md-icon-badge,.md-icon-badge{
+    @if $class != null{
+      &.#{$class} {
+        @include _md-icon-badge($map);
+        @content;
+      }
+    }@else{
+      @include _md-icon-badge($map);
+      @content;
+    }
+  }
+};
+

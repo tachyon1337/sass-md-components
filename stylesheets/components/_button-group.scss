@@ -1,0 +1,57 @@
+
+
+
+
+/// @access private
+/// @param {Map} $map
+@mixin _md-button-group($map){
+  $_size:map-nested-get-default($map,item,size,35px);
+  $_background:map-nested-get-default($map,item,background,#fff);
+  $_border:map-nested-get-default($map,item,border,1px solid #eee);
+  $_icon-size:map-nested-get-default($map,icon,size,18px);
+  $_icon-color:map-nested-get-default($map,icon,color,#999);
+
+  @include flexbox();
+
+  &>*{
+    height:$_size;
+    width:$_size;
+    background:$_background;
+    border: $_border;
+
+    @include flexbox($justification:center,$alignment:center);
+    @include span-icon(){
+      color:$_icon-color;
+      font-size:$_icon-size;
+    }
+    &:first-of-type{
+      border-right:0;
+    }
+  }
+
+}
+
+
+
+
+/// @access public
+/// @require {Mixin} _md-button-group - private mixin
+/// @param {String} $class - class scope
+/// @param {Map} $map
+/// @prop {Map} item
+/// @prop {String} item.size (35px) - item size
+/// @prop {String} item.background (#fff) - item background
+/// @prop {String} item.border (1px solid #eee) - item border
+/// @prop {Map} icon
+/// @prop {String} icon.size (18px) - icon size
+/// @prop {String} icon.color (#999) - icon color
+/// @example
+///   md-button-group()
+
+@mixin md-button-group($tags:null,$class:null,$map:()){
+  $tag:md-button-group;
+  @include element-tag($tag,$tags,$class){
+    @include _md-button-group($map);
+    @content;
+  }
+};

@@ -1,0 +1,100 @@
+
+/// @access private
+/// @param {Map} $map
+@mixin _md-dropdown($map){
+  $_border-radius:map-get-default($map,border-radius,2px);
+  $_z-index:map-get-default($map,z-index,10);
+  $_background:map-get-default($map,background,#fff);
+  $_border:map-get-default($map,border,#fff);
+  $_font-size:map-get-default($map,font-size,14px);
+  $_font-family:map-get-default($map,font-family,'robotoregular');
+  $_padding:map-get-default($map,padding,1em .5em);
+  $_min-width:map-get-default($map,min-width,10em);
+  $_divider-border:map-get-default($map,divider-border,#eaeaea);
+  $_item-padding:map-nested-get-default($map,item,padding,.5em);
+  $_item-color:map-nested-get-default($map,item,color,#515151);
+  $_item-line-height:map-nested-get-default($map,item,line-height,24px);
+  $_item-background-hover:map-nested-get-default($map,item,background-hover,#e7e7e7);
+  $_item-icon-margin:map-nested-get-default($map,item,icon-margin,0 .5em 0 0);
+
+  border-radius:$_border-radius;
+  position:absolute;
+  z-index:$_z-index;
+  top:100%;
+  left:0;
+  background:$_background;
+  border:$_border;
+  min-width:$_min-width;
+  font-size:$_font-size;
+  outline:0;
+  box-shadow:map-get($MD-Depth,3);
+  display:none;
+  font-family:$_font-family;
+  &>header{
+    display:block;
+    padding:$_padding;
+  }
+  &>footer{
+    display:block;
+    padding:$_padding;
+  }
+  &>menu-item{
+    @include flexbox();
+    @include span-icon(){
+      margin:$_item-icon-margin;
+    }
+    padding:$_item-padding;
+    color:$_item-color;
+    line-height:$_item-line-height;
+    &>a{
+      color:$_item-color;
+    }
+    &:hover{
+      background:$_item-background-hover;
+      cursor:pointer;
+    }
+  }
+  &>menu-divider{
+    width: 100%;
+    height: 0;
+    border: 0;
+    border-bottom: 1px solid $_divider-border;
+    padding: 0;
+    display:list-item;
+  }
+};
+
+
+
+/// @access public
+/// @require {Mixin} _md-dropdown - private mixin
+/// @require {Mixin} md-element-tags - element tags mixin
+/// @param {String} $class - class scope
+/// @param {Map} $map
+/// @prop {String} padding (1em .5em) - padding
+/// @prop {String} min-width (10em) - min-width
+/// @prop {String} border-radius (2px) - border-radius
+/// @prop {String} z-index (10) - z-index
+/// @prop {String} border (#fff) - border-color
+/// @prop {String} font-size (14px) - font-size
+/// @prop {String} font-family ('robotoregular') - font family
+/// @prop {String} divider border (#eaeaea) - divider border
+/// @prop {Map} item
+/// @prop {String} item.padding (.5em) - item padding
+/// @prop {String} item-color (#515151) - item color
+/// @prop {String} item-line-height (24px) - item line height
+/// @prop {String} item-background-hover (#e7e7e7) - item background hover color
+/// @prop {String} item-icon-margin (0 .5em 0 0) - item icon margin
+/// @content css
+/// @example
+///   md-dropdown()
+@mixin md-dropdown($tags:null,$class:null,$map:()){
+  $tag:md-dropdown;
+  @include element-tag($tag,$tags,$class){
+    @include _md-dropdown($map);
+    @content;
+  }
+  [dropdown]{
+    position:relative;
+  }
+};

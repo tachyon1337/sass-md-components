@@ -1,0 +1,93 @@
+
+@mixin loader-animation(){
+  @-webkit-keyframes md-preloader { 100% { -webkit-transform: rotate(360deg) }}
+  @keyframes md-preloader { 100% { transform: rotate(360deg); -webkit-transform: rotate(360deg) }}
+
+  @-webkit-keyframes md-preloader-bounce {
+    0%, 100% { -webkit-transform: scale(0.0) }
+    50% { -webkit-transform: scale(1.0) }
+  }
+
+  @keyframes md-preloader-bounce {
+    0%, 100% {
+      transform: scale(0.0);
+      -webkit-transform: scale(0.0);
+    } 50% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+      }
+  }
+}
+
+
+@mixin md-loader($map:()){
+  $_color1:map-get-default($map,color1,#F44336);
+  $_color2:map-get-default($map,color2,#4CAF50);
+  $_background:map-get-default($map,background,#eee);
+
+  body{
+    &[preload]{
+      opacity:0;
+    }
+  }
+  @include loader-animation();
+
+  md-preloader{
+    display:none;
+    &.animate{
+      position:fixed;
+      z-index:1000;
+      min-height: 100vh;
+      height: 100vh;
+      width:100%;
+      background:#eee;
+      @include flexbox($alignment:center,$justification:center);
+
+      &>.preloader{
+        width: 40px;
+        height: 40px;
+        position:relative;
+        -webkit-animation-name:md-preloader;
+        animation-name: md-preloader;
+        -webkit-animation-duration: 2s;
+        animation-duration: 2s;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+        animation-timing-function: linear;
+
+        .circle1, .circle2 {
+          width: 60%;
+          height: 60%;
+          display: inline-block;
+          position: absolute;
+          top: 0;
+          background-color: $_color1;
+          border-radius: 100%;
+          -webkit-animation-name:md-preloader-bounce;
+          animation-name: md-preloader-bounce;
+          -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+          -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+          -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+
+        }
+        .circle2 {
+          top: auto;
+          bottom: 0;
+          @include animation-delay(-1.0s);
+          background-color: $_color2;
+        }
+      }
+
+
+    }
+  }
+
+
+
+  @content;
+
+}

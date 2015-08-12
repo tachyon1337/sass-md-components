@@ -1,0 +1,70 @@
+
+
+/// @access private
+/// @param {Map} $map
+@mixin _md-fab($map){
+  $_position:map-get-default($map,position,fixed);
+  $_z-index:map-get-default($map,z-index,100);
+  $_top:map-get($map,top);
+  $_bottom:map-get-default($map,bottom,5%);
+  $_right:map-get-default($map,right,30px);
+  $_left:map-get($map,left);
+  $_size:map-get-default($map,size,56px);
+  $_elevation:map-get-default($map,elevation,map-get($MD-Depth,1));
+  $_background:map-get-default($map,background,#E91E63);
+  $_color:map-get-default($map,color,#fff);
+
+  cursor:pointer;
+  border-radius:50%;
+  @include flexbox($justification:center,$alignment:center);
+  position:$_position;
+  z-index:$_z-index;
+  @if $_top !=null{
+    top:$_top;
+  }@else{
+    bottom:$_bottom;
+  }
+  @if $_left!=null{
+    left:$_left;
+  }@else{
+    right:$_right;
+  }
+  height:$_size;
+  width:$_size;
+
+  background:$_background;
+  color:$_color;
+  box-shadow:$_elevation;
+
+  &>span{
+    margin:0;
+    padding:0;
+  }
+}
+
+/// @access public
+/// @require {Mixin} _md-fab - private mixin
+/// @require {Mixin} md-element - element tag mixin
+/// @param {String} $class - class scope
+/// @param {Map} $map
+/// @prop {String} size (56px) - component height,width
+/// @prop {String} padding (0 6em 0 1em) - component padding
+/// @prop {String} position (fixed) - position
+/// @prop {String} bottom (5%) bottom
+/// @prop {String} top  - <optional> top
+/// @prop {String} right (30px) - bottom
+/// @prop {String} left  - <optional> left
+/// @prop {String} z-index (100) - z-index
+/// @prop {String} background (#E91E63) - background
+/// @prop {String} color (#fff) - color
+/// @prop {String} extend-elevation ('.md.elevation-1') - material depth class to extend
+/// @content css
+/// @example
+///   md-fab($map:(extend-color:'.md.yellow'))
+@mixin md-fab($class:null,$map:()){
+  $tag:md-fab;
+  @include element-tag($tag:$tag,$class:$class){
+    @include _md-fab($map);
+    @content;
+  }
+}

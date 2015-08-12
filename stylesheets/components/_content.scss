@@ -1,0 +1,23 @@
+
+
+
+
+
+
+/// @access public
+/// @content css
+/// @example
+///   md-content()
+@mixin md-content(){
+  md-content,.md-content{
+    width:100%;
+    background:#fff;
+    @extend .md.elevation-05;
+    border-radius:2px;
+    margin-bottom:1.5em;
+    min-height:300px;
+    padding:1em 2em 1.5em 2em;
+    @content;
+  }
+
+}

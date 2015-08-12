@@ -1,0 +1,72 @@
+
+$palette-primary:map-deep-get($MD-Color,blue,value) !default;
+$palette-primary-text:map-deep-get($MD-Color,blue,element) !default;
+$palette-primary-2:map-deep-get($MD-Color,blue,primary,900,value) !default;
+$palette-primary-2-text:map-deep-get($MD-Color,blue,primary,900,element) !default;
+$palette-primary-3:map-deep-get($MD-Color,blue,primary,700,value) !default;
+$palette-primary-3-text:map-deep-get($MD-Color,blue,primary,700,element) !default;
+$palette-primary-accent:map-deep-get($MD-Color,blue,accent,100,value) !default;
+$palette-primary-accent-text:map-deep-get($MD-Color,blue,accent,100,element) !default;
+$palette-secondary:map-deep-get($MD-Color,pink,value) !default;
+$palette-secondary-text:map-deep-get($MD-Color,pink,element) !default;
+$palette-secondary-accent:map-deep-get($MD-Color,pink,accent,200,value) !default;
+$palette-secondary-accent-text:map-deep-get($MD-Color,pink,accent,200,element) !default;
+$palette-label:map-deep-get($MD-Color,grey,value) !default;
+$palette-label-accent:map-deep-get($MD-Color,grey,primary,300,value) !default;
+$palette-label-dark-light:#000 !default;
+$palette-placeholder:rgba(md-rgb($palette-label),0.54) !default;
+$palette-hint:rgba(md-rgb($palette-label),0.26) !default;
+$palette-switch:#F1F1F1 !default;
+$palette-switch-track:#818181 !default;
+
+
+$Palette:(
+        primary:$palette-primary,
+        primary-text:$palette-primary-text,
+        primary-2:$palette-primary-2,
+        primary-2-text:$palette-primary-2-text,
+        primary-3:$palette-primary-3,
+        primary-3-text:$palette-primary-3-text,
+        primary-accent:$palette-primary-accent,
+        primary-accent-text:$palette-primary-accent-text,
+        secondary:$palette-secondary,
+        secondary-text:$palette-secondary-text,
+        secondary-accent:$palette-secondary-accent,
+        secondary-accent-text:$palette-secondary-accent-text,
+        label:$palette-label,
+        label-accent:$palette-label-accent,
+        label-dark-light:$palette-label-dark-light,
+        placeholder:$palette-placeholder,
+        hint:$palette-hint,
+        switch:$palette-switch,
+        switch-track:$palette-switch-track
+);
+
+@include component(md-menu, (
+        background:none,
+        font-color:inherit,
+        hover:(
+                font-color:map-deep-get($MD-Color, teal, value)
+
+        ),
+        active:(
+                font-color:map-deep-get($MD-Color, teal, value)
+        )
+));
+
+@include component(md-menu-header, (
+        font-color:inherit,
+        icon-color:inherit,
+        hover:(
+                background:none,
+                font-color:map-deep-get($MD-Color, teal, value),
+                icon-color:map-deep-get($MD-Color, teal, value)
+        ),
+        active:(
+                background:map-deep-get($MD-Color, teal, value),
+                font-color:map-deep-get($MD-Color, teal, element),
+                icon-color:map-deep-get($MD-Color, teal, element)
+        )
+));
+
+

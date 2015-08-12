@@ -1,0 +1,52 @@
+
+
+/// @access public
+/// @param {Map} $map
+/// @prop {String} gutter (30px) - component gutter
+/// @content css
+/// @example
+///   md-grid-box();
+@mixin md-grid-box($map:()){
+  $_gutter:map-get-default($map,gutter,30px);
+
+  md-grid-box{
+    @include flexbox();
+    width:100%;
+    @content;
+  }
+  md-column{
+    @include flexbox();
+    @include flex-wrap(wrap);
+    &:first-of-type{
+      padding-right:$_gutter;
+    }
+    &[width-70]{
+      width:70%;
+    }
+    &[width-60]{
+      width:60%;
+    }
+    &[width-50]{
+      width:50%;
+    }
+    &[width-30]{
+      width:30%;
+    }
+    &[width-40]{
+      width:40%;
+    }
+    &[width-100]{
+      width:100%;
+      padding-right:0;
+    }
+  }
+  @include media-breakpoint(1024px){
+    md-grid-box{
+      @include flex-wrap(wrap);
+    }
+    md-column{
+      width:100% !important;
+      padding-right:0 !important;
+    }
+  }
+}

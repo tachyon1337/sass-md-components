@@ -1,0 +1,70 @@
+
+
+/// @access private
+/// @param {Map} $map
+@mixin _md-bar($map){
+  $_background:map-get-default($map,background,#fff);
+  $_font-size:map-get-default($map,font-size,14px);
+  $_height:map-get-default($map,height,60px);
+  $_border:map-get-default($map,border-bottom,1px solid #f0f0f0);
+  $_width:map-nested-get-default($map,side-panel,width,225px);
+  $_side-panel-padding:map-nested-get-default($map,side-panel,padding,1em);
+  $_side-panel-border:map-nested-get-default($map,side-panel,border-right,1px solid #f0f0f0);
+  $_main-panel-padding:map-nested-get-default($map,main-panel,padding,0 3em 0 1em);
+
+  height:$_height;
+  border-bottom:$_border;
+  @include flexbox($alignment:center);
+  font-size:$_font-size;
+  overflow-x:hidden;
+  background:$_background;
+
+  &>side-panel{
+    width:$_width;
+    height:100%;
+    border-right:$_side-panel-border;
+    @include flexbox($alignment:center);
+    padding-left: $_side-panel-padding;
+    &.space-around{
+      @include justify-content(space-around);
+    }
+    &.space-between{
+      @include justify-content(space-between);
+    }
+  }
+  &>main-panel{
+    @include flexbox($alignment:center,$justification:space-between);
+    @include flex-grow(4);
+    padding:$_main-panel-padding;
+  }
+
+}
+
+
+
+
+/// @access public
+/// @require {Mixin} _md-bar - private mixin
+/// @param {String} $class - class scope
+/// @param {Map} $map
+/// @prop {String} background (#fff) - background
+/// @prop {String} font-size (14px) - font-size
+/// @prop {String} height (60px) - height
+/// @prop {String} border-bottom (1px solid $f0f0f0) - bottom border
+/// @prop {Map} side-panel
+/// @prop {String} side-panel.width (225px) - side panel width
+/// @prop {String} side-panel.border-right (1px solid #f0f0f0) - side panel border right
+/// @prop {String} side-panel.padding (1em) - side panel padding left
+/// @prop {Map} main-panel
+/// @prop {String} main-panel.padding (0 3em 0 1em) - main panel padding
+/// @content css
+/// @example
+///   md-bar()
+
+@mixin md-bar($tags:null,$class:null,$map:()){
+  $tag:md-bar;
+  @include element-tag($tag,$tags,$class){
+    @include _md-bar($map);
+    @content;
+  }
+};

@@ -1,0 +1,59 @@
+
+/// @access private
+@mixin _avatar-size(){
+  @for $i from 3 through 10{
+    $size:$i*10;
+    &.size-#{$size}{
+      height:#{$size}px;
+      width:#{$size}px;
+      min-height:#{$size}px;
+      min-width:#{$size}px
+    }
+  }
+}
+
+/// @access private
+@mixin _md-avatar($map){
+  display:block;
+  .avatar{
+    $_size:map-get-default($map,size,40px);
+    height:$_size;
+    width:$_size;
+    min-height:$_size;
+    min-width:$_size;
+    border-radius:50%;
+    @include _avatar-size();
+  }
+}
+
+/// @access private
+@mixin _md-avatar-css($map){
+  $_size:map-get-default($map,size,40px);
+  height:$_size;
+  width:$_size;
+  min-height:$_size;
+  min-width:$_size;
+  border-radius:50%;
+  @include _avatar-size();
+}
+
+/// @access public
+/// @require {Mixin} _md-avatar - private mixin
+/// @require {Mixin} _avatar-size - private mixin
+/// @require {Mixin} md-element - element tag mixin
+/// @param {String} $class - class scope
+/// @param {Map} $map
+/// @prop {String} size (40px) - size
+/// @content css
+/// @example
+///   md-avatar()
+@mixin md-avatar($class:null,$map:()){
+  $tag:md-avatar;
+  @include element-tag($tag:$tag,$class:$class){
+    @include _md-avatar($map);
+    @content;
+  }
+  .md-avatar{
+    @include _md-avatar-css($map);
+  }
+}
