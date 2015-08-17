@@ -2,9 +2,8 @@
 /// disable polymer paper-header box-shadow
 /// @access private
 @mixin _paper-header-md-toolbar(){
-  paper-header-panel.paper-header-panel-0 .paper-header:after {
+  paper-header-panel .paper-header-panel.has-shadow {
     box-shadow:none !important;
-
   }
 }
 

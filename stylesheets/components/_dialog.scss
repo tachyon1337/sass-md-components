@@ -7,13 +7,14 @@
   $_width:map-get-default($map,width,500px);
   $_height:map-get-default($map,height,600px);
   $_background:map-get-default($map,background,#fff);
-  $_z-index:map-get-default($map,z-index,4);
+  $_z-index:map-get-default($map,z-index,50);
   $_font-family:map-get-default($map,font-family,'robotoregular');
   $_depth:map-get-default($map,depth,map-get($MD-Depth,3));
   $_header-height:map-nested-get-default($map,header,height,42px);
   $_header-padding:map-nested-get-default($map,header,padding,0 1em);
   $_header-font-family:map-nested-get-default($map,header,font-family,'robotomedium');
-  $_header-color:map-nested-get-default($map,header,color,map-nested-get($MD-Color,blue,value));
+  $_header-background:map-nested-get-default($map,header,background,map-nested-get($MD-Color,blue,value));
+  $_header-color:map-nested-get-default($map,header,color,#fff);
   $_header-h6-margin:map-nested-get-default($map,header,h6-margin,0 0 0 1.5em);
   $_content-padding:map-nested-get-default($map,content,padding,0);
 
@@ -39,7 +40,8 @@
     width:100%;
     padding:$_header-padding;
     font-family:$_header-font-family;
-    background:$_header-color;
+    background:$_header-background;
+    color:$_header-color;
 
     &>span[dialog-action]{
       margin-left:auto;
@@ -90,14 +92,15 @@
 /// @prop {String} width (500px) - width
 /// @prop {String} height (600px) - height
 /// @prop {String} background (#fff) - background
-/// @prop {String} z-index (4) - z-index
+/// @prop {String} z-index (50) - z-index
 /// @prop {String} font-family ('robotoregular') - height
-/// @prop {String} extend-depth ('.md.elevation-3') - extend depth class
+/// @prop {String} depth (map-get($MD-Depth,3)) - box-shadow
 /// @prop {Map} header - component header map
 /// @prop {String} header.height (42px) - header height
 /// @prop {String} header.padding (0 1em) - header padding
 /// @prop {String} header.font-family ('robotomedium') - header font-family
-/// @prop {String} header.extend-color ('.md.blue') - header extend color class
+/// @prop {String} header.background (#fff) - header color
+/// @prop {String} header.color (#fff) - header color
 /// @prop {String} header.h6-margin (0 0 0 1.5em) - header h6 title margin
 /// @prop {Map} content - component content map
 /// @prop {String} content.padding (0) - content padding

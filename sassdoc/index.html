@@ -589,13 +589,14 @@
   $_width:map-get-default($map,width,500px);
   $_height:map-get-default($map,height,600px);
   $_background:map-get-default($map,background,#fff);
-  $_z-index:map-get-default($map,z-index,4);
+  $_z-index:map-get-default($map,z-index,50);
   $_font-family:map-get-default($map,font-family,&#39;robotoregular&#39;);
   $_depth:map-get-default($map,depth,map-get($MD-Depth,3));
   $_header-height:map-nested-get-default($map,header,height,42px);
   $_header-padding:map-nested-get-default($map,header,padding,0 1em);
   $_header-font-family:map-nested-get-default($map,header,font-family,&#39;robotomedium&#39;);
-  $_header-color:map-nested-get-default($map,header,color,map-nested-get($MD-Color,blue,value));
+  $_header-background:map-nested-get-default($map,header,background,map-nested-get($MD-Color,blue,value));
+  $_header-color:map-nested-get-default($map,header,color,#fff);
   $_header-h6-margin:map-nested-get-default($map,header,h6-margin,0 0 0 1.5em);
   $_content-padding:map-nested-get-default($map,content,padding,0);
 
@@ -621,7 +622,8 @@
     width:100%;
     padding:$_header-padding;
     font-family:$_header-font-family;
-    background:$_header-color;
+    background:$_header-background;
+    color:$_header-color;
 
     &amp;&gt;span[dialog-action]{
       margin-left:auto;
@@ -1334,9 +1336,8 @@
     @include transform(translateZ(0));
   }
  }" data-collapsed="@mixin md-ripple-effect() { ... }"><code>@mixin md-ripple-effect() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>material design ripple keyframe animation</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>md-ripple-effect()</code></pre></div></section><section class="main__item container item" id="mixin-_paper-header-md-toolbar"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_paper-header-md-toolbar">_paper-header-md-toolbar</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _paper-header-md-toolbar() { 
-  paper-header-panel.paper-header-panel-0 .paper-header:after {
+  paper-header-panel .paper-header-panel.has-shadow {
     box-shadow:none !important;
-
   }
  }" data-collapsed="@mixin _paper-header-md-toolbar() { ... }"><code>@mixin _paper-header-md-toolbar() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>disable polymer paper-header box-shadow</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#mixin-md-toolbar"><code>md-toolbar</code></a></li></ul></section><section class="main__item container item" id="mixin-_md-toolbar"><h3 class="item__heading"><span class="item__access">[private]</span> <a class="item__name" href="#mixin-_md-toolbar">_md-toolbar</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin _md-toolbar($map) { 
   $_height:map-get-default($map,height,56px);
@@ -2024,7 +2025,7 @@
     -webkit-transition: all .3s;
     transition: all .3s;
     color:$_color;
-    @include md-component-placeholder($_placeholder);
+    @include component-placeholder($_placeholder);
 
     &amp;[disabled]{
       opacity:.5;
