@@ -27,14 +27,14 @@
   $_height:map-get-default($map,height,10em);
   $_icon-size:map-nested-get-default($map,icon,size,72px);
   $_span-size:map-get-default($map,span-size,14px);
-  $_breakpoint-large-width:map-default-deep-get($map,100%,breakpoint,large,width);
-  $_breakpoint-large-icon-size:map-default-deep-get($map,72px,breakpoint,large,icon-size);
+  $_breakpoint-large-width:map-deep-get-default($map,100%,breakpoint,large,width);
+  $_breakpoint-large-icon-size:map-deep-get-default($map,72px,breakpoint,large,icon-size);
   $_breakpoint-large-header-size:map-deep-get($map,breakpoint,large,header-size);
-  $_breakpoint-medium-width:map-default-deep-get($map,100%,breakpoint,medium,width);
-  $_breakpoint-medium-icon-size:map-default-deep-get($map,72px,breakpoint,medium,icon-size);
+  $_breakpoint-medium-width:map-deep-get-default($map,100%,breakpoint,medium,width);
+  $_breakpoint-medium-icon-size:map-deep-get-default($map,72px,breakpoint,medium,icon-size);
   $_breakpoint-medium-header-size:map-deep-get($map,breakpoint,medium,header-size);
-  $_breakpoint-small-width:map-default-deep-get($map,100%,breakpoint,small,width);
-  $_breakpoint-small-icon-size:map-default-deep-get($map,72px,breakpoint,small,icon-size);
+  $_breakpoint-small-width:map-deep-get-default($map,100%,breakpoint,small,width);
+  $_breakpoint-small-icon-size:map-deep-get-default($map,72px,breakpoint,small,icon-size);
   $_breakpoint-small-header-size:map-deep-get($map,breakpoint,small,header-size);
 
 

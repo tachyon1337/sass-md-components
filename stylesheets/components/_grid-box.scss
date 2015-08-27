@@ -12,9 +12,11 @@
   md-grid-box{
     @include flexbox();
     width:100%;
+    position:relative;
     @content;
   }
   md-column{
+    z-index:2;
     @include flexbox();
     @include flex-wrap(wrap);
     &:first-of-type{

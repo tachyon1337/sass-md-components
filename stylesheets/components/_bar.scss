@@ -16,7 +16,7 @@
   border-bottom:$_border;
   @include flexbox($alignment:center);
   font-size:$_font-size;
-  overflow-x:hidden;
+  overflow:hidden;
   background:$_background;
 
   &>side-panel{

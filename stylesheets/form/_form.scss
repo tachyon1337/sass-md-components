@@ -16,6 +16,7 @@
   md-radio{
     visibility: hidden;
     @content;
+    margin:0 0 1em 0;
     &.margin-left{
       margin-left:.5em;
     }
@@ -142,6 +143,7 @@
   md-checkbox{
     visibility: hidden;
     position:relative;
+    margin:0 0 1em 0;
   }
   /* Remove default checkbox */
   [type="checkbox"]:not(:checked),
@@ -808,7 +810,7 @@
 
   md-select,[md-select] {
     position: relative;
-    margin-top:2em;
+    margin: 1em 0 2em 0;
     display:block;
     &>select{
       background:none;
@@ -948,6 +950,50 @@
 
 
 ////////Public
+
+/// @access public
+@mixin md-radio-list(){
+  md-radio-list{
+    &>label{
+      font-size:1em !important;
+    }
+    width:100%;
+    @include flexbox($alignment:center);
+    @include flex-wrap(wrap);
+    margin:1em 0 2em 0;
+    &>*{
+      margin:0 1em 0 0 !important;
+    }
+    &.column{
+      @include flexbox-column();
+      &>*{
+        margin-top:1em;
+      }
+    }
+  }
+}
+
+/// @access public
+@mixin md-checkbox-list(){
+  md-checkbox-list{
+    &>label{
+      font-size:1em !important;
+    }
+    width:100%;
+    @include flexbox($alignment:center);
+    @include flex-wrap(wrap);
+    margin:1em 0 2em 0;
+    &>*{
+      margin:0 1em 0 0 !important;
+    }
+    &.column{
+      @include flexbox-column();
+      &>md-checkbox{
+        margin-top:1em;
+      }
+    }
+  }
+}
 
 
 
@@ -1125,7 +1171,8 @@
   @include md-select($class,$map);
   @include md-file($class);
   @include md-input-icon-button($class,$map);
-
+  @include md-radio-list();
+  @include md-checkbox-list();
   @content;
 };
 
