@@ -11,5 +11,5 @@
 @import "node_modules/material-design-font/index";
 @import "node_modules/material-design-icons/index";
 @include semantic-theme();
-@include md-icons();
+//@include md-icons();
 @import "stylesheets/mixins";
