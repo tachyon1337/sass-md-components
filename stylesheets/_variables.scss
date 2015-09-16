@@ -14,8 +14,8 @@ $palette-secondary-accent-text:map-deep-get($MD-Color,pink,accent,200,element) !
 $palette-label:map-deep-get($MD-Color,grey,value) !default;
 $palette-label-accent:map-deep-get($MD-Color,grey,primary,300,value) !default;
 $palette-label-dark-light:#000 !default;
-$palette-placeholder:rgba(md-rgb($palette-label),0.54) !default;
-$palette-hint:rgba(md-rgb($palette-label),0.26) !default;
+$palette-placeholder:rgba($palette-label,0.54) !default;
+$palette-hint:rgba($palette-label,0.26) !default;
 $palette-switch:#F1F1F1 !default;
 $palette-switch-track:#818181 !default;
 

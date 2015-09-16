@@ -15,8 +15,8 @@
 //$palette-label:map-deep-get($MD-Color,grey,value);
 //$palette-label-accent:map-deep-get($MD-Color,grey,primary,300,value);
 //$palette-label-dark-light:#000;
-//$palette-placeholder:rgba(md-rgb($palette-label),0.54);
-//$palette-hint:rgba(md-rgb($palette-label),0.26);
+//$palette-placeholder:rgba($palette-label,0.54);
+//$palette-hint:rgba($palette-label,0.26);
 //$palette-switch:#F1F1F1;
 //$palette-switch-track:#818181;
 

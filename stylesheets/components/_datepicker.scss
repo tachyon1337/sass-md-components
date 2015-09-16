@@ -2,6 +2,7 @@
 
 /// @access private
 @mixin _md-datepicker($width,$map){
+  $_elevation:map-get($MD-Depth,5);
   $_background:map-get-default($map,background,#fff);
   $_header-color:map-get-default($map,header,#008d7f);
   $_month-color:map-get-default($map,month,#616161);
@@ -15,6 +16,7 @@
   $_icon-color:map-nested-get-default($map,icon,color,#676767);
   $_icon-next:map-nested-get-default($map,icon,next,"\e8a8");
   $_icon-prev:map-nested-get-default($map,icon,prev,"\e8a7");
+  $_md-depth:map-get-default($map,depth,$_elevation);
 
   .ui-datepicker,
   .md-datepicker-header {
@@ -122,7 +124,7 @@
   .ui-datepicker {
     padding: 0;
     border: none;
-    @extend .md.elevation-5;
+    box-shadow:$_md-depth;
     width: $width;
     background:$_background;
   }
@@ -431,6 +433,7 @@
 /// @prop {String} background (#fff) - component background
 /// @prop {String} main (#009688) - main visual background color
 /// @prop {String} header (#008d7f) - header background color
+/// @prop {String} depth (map-get($MD-Depth,5) - component box-shadow depth
 /// @prop {String} month (#fff) - month color
 /// @prop {String} day (#999) - day color
 /// @prop {String} year (rgba(255, 255, 255, 0.4)) - year color
