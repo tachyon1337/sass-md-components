@@ -27,9 +27,6 @@
   $_height:map-get-default($map,height,10em);
   $_icon-size:map-nested-get-default($map,icon,size,72px);
   $_span-size:map-get-default($map,span-size,14px);
-  $_breakpoint-large-width:map-deep-get-default($map,100%,breakpoint,large,width);
-  $_breakpoint-large-icon-size:map-deep-get-default($map,72px,breakpoint,large,icon-size);
-  $_breakpoint-large-header-size:map-deep-get($map,breakpoint,large,header-size);
   $_breakpoint-medium-width:map-deep-get-default($map,100%,breakpoint,medium,width);
   $_breakpoint-medium-icon-size:map-deep-get-default($map,72px,breakpoint,medium,icon-size);
   $_breakpoint-medium-header-size:map-deep-get($map,breakpoint,medium,header-size);
@@ -57,20 +54,6 @@
     }
     @content;
 
-    @include large-content() {
-      width:$_breakpoint-large-width;
-      @include span-icon(){
-        font-size:$_breakpoint-large-icon-size;
-      }
-      .card-text{
-        h2{
-          font-size:$_breakpoint-large-header-size;
-          @if $_breakpoint-large-header-size !=null{
-            font-size:$_breakpoint-large-header-size;
-          }
-        }
-      }
-    }
     @include medium-content(){
       width:$_breakpoint-medium-width;
       @include span-icon(){
